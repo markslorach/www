@@ -2,34 +2,34 @@
 import { cn } from "@/lib/utils";
 
 type NavLink = {
-    title: string;
-    href: string;
+  title: string;
+  href: string;
 };
 
 const navLinks: NavLink[] = [
-    { title: "home", href: "/" },
-    { title: "about", href: "/about" },
-    { title: "projects", href: "/projects" },
+  { title: "home", href: "/" },
+  { title: "about", href: "/about" },
+  { title: "projects", href: "/projects" },
 ];
 
 const pathname = Astro.url.pathname;
 ---
 
 <header class="h-24 flex items-center justify-between">
-    <span>mark.</span>
+  <span>mark.</span>
 
-    <nav class="space-x-4">
-        {
-            navLinks.map((link) => (
-                <a
-                    class={cn({
-                        "text-blue-400": pathname === link.href,
-                    })}
-                    href={link.href}
-                >
-                    {link.title}
-                </a>
-            ))
-        }
-    </nav>
+  <nav class="space-x-4">
+    {
+      navLinks.map((link) => (
+        <a
+          class={cn({
+            "text-blue-400": pathname === link.href,
+          })}
+          href={link.href}
+        >
+          {link.title}
+        </a>
+      ))
+    }
+  </nav>
 </header>
