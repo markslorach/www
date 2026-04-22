@@ -1,12 +1,16 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Inter, Alice } from "next/font/google";
+import { Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 
-const geistSans = Inter({
-  variable: "--font-geist-sans",
+const switzer = localFont({
+  src: [
+    { path: "../fonts/Switzer-Variable.woff2", style: "normal" },
+    { path: "../fonts/Switzer-VariableItalic.woff2", style: "italic" },
+  ],
+  variable: "--font-switzer",
   display: "swap",
-  subsets: ["latin"],
 });
 
 const geistMono = Geist_Mono({
@@ -14,11 +18,6 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const alice = Alice({
-  weight: "400",
-  variable: "--font-alice",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Mark Slorach - Software Developer",
@@ -31,7 +30,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={cn(geistSans.variable, geistMono.variable, alice.variable)}>
+    <html lang="en" className={cn(switzer.variable, geistMono.variable)}>
       <body>{children}</body>
     </html>
   );

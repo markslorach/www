@@ -2,13 +2,7 @@
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { usePathname } from "next/navigation";
-
-const navLinks = [
-  { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
-  { label: "Photos", href: "/photos" },
-  { label: "Writing", href: "/writing" },
-];
+import { navLinks } from "./nav-links";
 
 export default function Sidebar() {
   const pathname = usePathname()
@@ -16,8 +10,8 @@ export default function Sidebar() {
   return (
     <aside className="sticky h-screen top-0 min-w-50 border-r min-h-screen py-16 pr-8">
       <header className="space-y-2 mb-12">
-        <h1 className="text-[14px] font-medium">Mark Slorach</h1>
-        <div className="text-[13px] text-muted-foreground font-light">
+        <h1 className="text-[15px] font-medium">Mark Slorach</h1>
+        <div className="text-[13.5px] text-muted-foreground font-light space-y-[1.8px]">
           <p>Software Developer</p>
           <p>Scotland 🏴󠁧󠁢󠁳󠁣󠁴󠁿</p>
         </div>
