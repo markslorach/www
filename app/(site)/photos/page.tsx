@@ -1,3 +1,3 @@
 export default function PhotosPage() {
-  return <div>Hello from Photos Page</div>;
+  return <div>Some of my favourite photographs</div>;
 }

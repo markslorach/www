@@ -17,7 +17,7 @@ export default function Sidebar() {
         </div>
       </header>
 
-      <nav className="flex flex-col gap-1.5 text-[12.5px] font-light font-mono text-muted-foreground">
+      <nav className="flex flex-col gap-1.5 text-[12.5px] font-light font-mono tracking-tight text-muted-foreground">
         {navLinks.map((link) => {
           const isActive = pathname === link.href
 
