@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist_Mono } from "next/font/google";
+import { Geist_Mono, DM_Serif_Display, Lora, Inter } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import { cn } from "@/lib/utils";
@@ -13,10 +13,20 @@ const switzer = localFont({
   display: "swap",
 });
 
+const inter = Inter({
+  variable: "--font-inter", 
+  display: "swap"
+})
+
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+
+const serifDisplay = Lora({
+  variable: "--font-serif",
+  display: "swap",
+})
 
 
 export const metadata: Metadata = {
@@ -30,7 +40,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={cn(switzer.variable, geistMono.variable)}>
+    <html lang="en" className={cn(switzer.variable, inter.variable, serifDisplay.variable, geistMono.variable)}>
       <body>{children}</body>
     </html>
   );

@@ -9,8 +9,8 @@ const projects = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string(),
-    images: z.array(z.string()).length(3).optional(),
-    date: z.string(),
+    images: z.array(z.string()).min(1).max(3).optional(),
+    order: z.number(),
     tags: z.array(z.string()).optional(),
     url: z.string().optional(),     
     github: z.string().optional(),
