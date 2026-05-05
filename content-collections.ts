@@ -13,7 +13,7 @@ const projects = defineCollection({
     order: z.number(),
     tags: z.array(z.string()).optional(),
     url: z.string().optional(),     
-    github: z.string().optional(),
+    github: z.string()
   }),
   transform: async (document, context) => {
     const mdx = await compileMDX(context, document);

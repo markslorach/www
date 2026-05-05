@@ -2,6 +2,7 @@
 import type { Project } from "content-collections";
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
+import Link from "next/link";
 
 type TProject = {
   project: Project;
@@ -9,6 +10,7 @@ type TProject = {
 
 export default function ProjectCard({ project }: TProject) {
   return (
+    <Link href={project.github} target="_blank">
     <div className="rounded-sm relative overflow-clip h-62 group">
       <div className="transition-all opacity-90 group-hover:opacity-50 duration-600 delay-40 rounded-md overflow-clip group-hover:delay-0 group-hover:duration-400 ease-in-out group-hover:-translate-y-12">
         {project.images?.[0] && (
@@ -31,5 +33,6 @@ export default function ProjectCard({ project }: TProject) {
         {project.description}
       </p>
     </div>
+    </Link>
   );
 }
