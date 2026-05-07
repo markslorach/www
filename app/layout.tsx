@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist_Mono, DM_Serif_Display, Lora, Inter } from "next/font/google";
+import { Geist_Mono, Lora, Inter } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import { cn } from "@/lib/utils";

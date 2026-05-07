@@ -6,7 +6,7 @@ export default function ProjectSection() {
 
   return (
     <section>
-      <h2 className="text-[19px] font-serif font-medium mb-10">Projects</h2>
+      <h2 className="text-[21px] font-serif font-medium mb-10">Projects</h2>
 
       <div className="grid grid-cols-2 gap-6">
         {sortedProjects.map((project) => (

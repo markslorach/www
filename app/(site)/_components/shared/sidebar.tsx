@@ -9,18 +9,18 @@ export default function Sidebar() {
 
   return (
     <aside className="sticky h-screen top-0 min-w-50 min-h-screen py-16 pr-8">
-      <header className="space-y-2 mb-12">
-        <h1 className="text-[19px] font-serif font-medium leading-none">
+      <header className="space-y-2.5 mb-12">
+        <h1 className="text-[20px] font-serif font-medium leading-none">
           Mark Slorach
         </h1>
 
-        <div className="text-[14px] text-muted-foreground font-light space-y-[1.8px]">
+        <div className="text-[14px] text-muted-foreground space-y-[1.8px]">
           <p>Software Developer</p>
           <p>Scotland 🏴󠁧󠁢󠁳󠁣󠁴󠁿</p>
         </div>
       </header>
 
-      <nav className="flex flex-col gap-1.25 text-[13px] font-light font-mono tracking-tight text-muted-foreground">
+      <nav className="flex flex-col gap-1.25 text-[13px] font-mono tracking-tight text-muted-foreground">
         {navLinks.map((link) => {
           const isActive = pathname === link.href;
 
