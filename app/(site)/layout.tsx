@@ -6,9 +6,9 @@ export default function SiteLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="mx-auto flex w-4xl gap-20 px-4">
+    <div className="mx-auto flex w-4xl gap-24 px-4">
       <Sidebar />
-      <main className="w-full py-12">{children}</main>
+      <main className="flex-1 py-12">{children}</main>
     </div>
   );
 }
