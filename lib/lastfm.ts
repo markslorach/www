@@ -11,13 +11,15 @@ export async function getLastPlayed() {
 
     if (!track) return { error: "No track found" };
 
+    const artwork = track.image[3]["#text"] as string;
+
     return {
       data: {
         title: track.name as string,
         url: track.url as string,
         album: track.album["#text"] as string,
         artist: track.artist["#text"] as string,
-        artwork: track.image[3]["#text"] as string || null
+        artwork: artwork?.includes("2a96cbd8b46e442fc41c2b86b821562f") ? null : artwork
       },
     };
   } catch {

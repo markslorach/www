@@ -12,21 +12,23 @@ export default async function MusicWidget() {
     <Link
       href={lastPlayed?.url ?? "#"}
       target={lastPlayed?.url ? "_blank" : "_self"}
-      className="bg-muted-foreground/10 relative flex flex-col gap-2 overflow-clip rounded-md border p-2 shadow-xs transition-transform duration-200 ease-in-out select-none hover:scale-102"
+      className="relative flex flex-col gap-2 overflow-clip rounded-md border p-2 shadow-xs transition-transform duration-200 ease-in-out select-none hover:scale-102"
     >
-      {lastPlayed?.artwork && (
+      {lastPlayed?.artwork ? (
         <Image
           src={lastPlayed.artwork}
           alt=""
           fill
           sizes="100%"
           draggable={false}
-          className="absolute inset-0 scale-150 object-cover opacity-15 blur-sm"
+          className="absolute inset-0 -z-10 scale-150 object-cover opacity-15 blur-sm"
         />
+      ) : (
+        <div className="absolute inset-0 -z-10 bg-linear-to-br from-blue-500/15 to-pink-500/10" />
       )}
 
       <div className="flex items-center justify-between">
-        <h3 className="text-muted-foreground text-xs leading-none tracking-wider uppercase">
+        <h3 className="text-muted-foreground dark:text-muted-foreground/70 text-xs leading-none tracking-wider uppercase">
           Last Played
         </h3>
 
@@ -59,7 +61,7 @@ export default async function MusicWidget() {
             {lastPlayed?.title}
           </p>
 
-          <p className="text-muted-foreground truncate text-sm leading-none">
+          <p className="text-muted-foreground dark:text-muted-foreground/70 truncate text-sm leading-none">
             {lastPlayed?.artist}
           </p>
         </div>
