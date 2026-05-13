@@ -12,7 +12,7 @@ export default async function MusicWidget() {
     <Link
       href={lastPlayed?.url ?? "#"}
       target={lastPlayed?.url ? "_blank" : "_self"}
-      className="bg-muted-foreground/10 relative flex flex-col gap-2 overflow-clip rounded-md border p-2 shadow-xs select-none"
+      className="bg-muted-foreground/10 relative flex flex-col gap-2 overflow-clip rounded-md border p-2 shadow-xs transition-transform duration-200 ease-in-out select-none hover:scale-102"
     >
       {lastPlayed?.artwork && (
         <Image
