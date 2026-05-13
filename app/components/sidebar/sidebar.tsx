@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import Header from "./header";
 import MusicWidget from "./music-widget";
 import Navigation from "./navigation";
@@ -10,7 +11,9 @@ export default function Sidebar() {
         <Navigation />
       </div>
 
-      <MusicWidget />
+      <Suspense fallback="Loading...">
+        <MusicWidget />
+      </Suspense>
     </aside>
   );
 }
