@@ -8,7 +8,7 @@ export default function SiteLayout({
   return (
     <div className="mx-auto flex w-4xl gap-24 px-4">
       <Sidebar />
-      <main className="flex-1 py-12">{children}</main>
+      <main className="flex-1 py-10">{children}</main>
     </div>
   );
 }

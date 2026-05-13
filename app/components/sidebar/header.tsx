@@ -5,7 +5,7 @@ export default function Header() {
   return (
     <header className="flex flex-col gap-6">
       <div>
-        <h1 className="mb-1.5 font-medium">@markslorach</h1>
+        <h1 className="mb-1 font-medium">@markslorach</h1>
 
         <p className="text-muted-foreground text-sm leading-relaxed">
           Software Developer from Scotland.
