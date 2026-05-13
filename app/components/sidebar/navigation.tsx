@@ -1,7 +1,7 @@
 "use client";
-import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { cn } from "@/lib/utils";
 
 const navLinks = [
   { label: "home", href: "/" },
@@ -14,7 +14,7 @@ export default function Navigation() {
   const pathname = usePathname();
 
   return (
-    <nav className="flex flex-col gap-2 py-12">
+    <nav className="flex flex-col gap-1 py-12">
       {navLinks.map((link) => (
         <Link
           href={link.href}
@@ -26,8 +26,8 @@ export default function Navigation() {
         >
           <span
             className={cn(
-              "w-2.5 text-blue-400 opacity-0 transition-opacity duration-200 ease-in-out group-hover:opacity-100",
-              { "opacity-100": link.href === pathname },
+              "w-2.5 text-base font-medium text-blue-400 opacity-0 transition-opacity duration-200 ease-in-out group-hover:opacity-100",
+              link.href === pathname && "opacity-100",
             )}
           >
             /

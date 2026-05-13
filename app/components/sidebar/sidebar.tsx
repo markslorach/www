@@ -1,4 +1,5 @@
 import Header from "./header";
+import MusicWidget from "./music-widget";
 import Navigation from "./navigation";
 
 export default function Sidebar() {
@@ -9,7 +10,7 @@ export default function Sidebar() {
         <Navigation />
       </div>
 
-      <div>Last.fm widget</div>
+      <MusicWidget />
     </aside>
   );
 }
