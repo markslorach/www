@@ -1,9 +1,16 @@
 "use server"
 
-export async function getLastPlayed() {
+export type Track = {
+  title: string;
+  url: string;
+  album: string;
+  artist: string;
+  artwork: string | null;
+}
+
+export async function getLastPlayed(): Promise<Track> {
   const url = `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=markslorach&api_key=${process.env.LASTFM_API_KEY}&format=json&limit=1`;
 
-  try {
     const res = await fetch(url);
 
     if (!res.ok) throw new Error("Failed to fetch track data");
@@ -13,16 +20,13 @@ export async function getLastPlayed() {
 
     if (!track) throw new Error("No track found");
 
-    const artwork = track.image[3]["#text"] as string;
+    const artwork = track.image[3]["#text"]
 
     return {
-      title: track.name as string,
-      url: track.url as string,
-      album: track.album["#text"] as string,
-      artist: track.artist["#text"] as string,
+      title: track.name,
+      url: track.url,
+      album: track.album["#text"],
+      artist: track.artist["#text"],
       artwork: !artwork || artwork.includes("2a96cbd8b46e442fc41c2b86b821562f") ? null : artwork
     };
-  } catch (error) {
-    throw error;
-  }
 }

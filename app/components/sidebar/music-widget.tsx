@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Link from "next/link";
 import Image from "next/image";
 import { Headphones, Music2 } from "lucide-react";
@@ -7,13 +7,18 @@ import { useLastPlayed } from "@/hooks/useLastPlayed";
 export default function MusicWidget() {
   const { data: lastPlayed, isLoading, isError } = useLastPlayed();
 
+  if (isLoading) return <p>Loading...</p>;
+  if (isError) return <p>Error!</p>;
+
+  if (!lastPlayed) return null;
+
   return (
     <Link
-      href={lastPlayed?.url ?? "#"}
-      target={lastPlayed?.url ? "_blank" : "_self"}
+      href={lastPlayed.url}
+      target="_blank"
       className="relative flex flex-col gap-2 overflow-clip rounded-md border p-2 shadow-xs transition-transform duration-200 ease-in-out select-none hover:scale-102"
     >
-      {lastPlayed?.artwork ? (
+      {lastPlayed.artwork ? (
         <Image
           src={lastPlayed.artwork}
           alt=""
@@ -39,7 +44,7 @@ export default function MusicWidget() {
 
       <div className="flex items-center gap-2">
         <div className="relative size-14 shrink-0 overflow-hidden rounded-md shadow-xs">
-          {lastPlayed?.artwork ? (
+          {lastPlayed.artwork ? (
             <Image
               src={lastPlayed.artwork}
               alt={`${lastPlayed.album} artwork`}
@@ -57,11 +62,11 @@ export default function MusicWidget() {
 
         <div className="flex min-w-0 flex-col gap-1">
           <p className="truncate leading-none font-medium">
-            {lastPlayed?.title}
+            {lastPlayed.title}
           </p>
 
           <p className="text-muted-foreground dark:text-muted-foreground/70 truncate text-sm leading-none">
-            {lastPlayed?.artist}
+            {lastPlayed.artist}
           </p>
         </div>
       </div>
