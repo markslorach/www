@@ -11,9 +11,7 @@ export default function Sidebar() {
         <Navigation />
       </div>
 
-      <Suspense fallback="Loading...">
-        <MusicWidget />
-      </Suspense>
+      <MusicWidget />
     </aside>
   );
 }

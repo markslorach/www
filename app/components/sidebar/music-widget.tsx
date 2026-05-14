@@ -1,12 +1,11 @@
+"use client"
 import Link from "next/link";
 import Image from "next/image";
-import { getLastPlayed } from "@/lib/lastfm";
 import { Headphones, Music2 } from "lucide-react";
+import { useLastPlayed } from "@/hooks/useLastPlayed";
 
-export default async function MusicWidget() {
-  const { data: lastPlayed, error } = await getLastPlayed();
-
-  if (error) return <p>Error!</p>;
+export default function MusicWidget() {
+  const { data: lastPlayed, isLoading, isError } = useLastPlayed();
 
   return (
     <Link

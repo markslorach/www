@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
-import ThemeToggle from "../theme-toggle";
+import ThemeToggle from "./theme-toggle";
 
 export default function Header() {
   return (
