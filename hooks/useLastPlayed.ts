@@ -7,5 +7,6 @@ export function useLastPlayed() {
     queryKey: ["last-played"],
     queryFn: getLastPlayed,
     refetchInterval: 60000,
+    refetchOnWindowFocus: false,
   });
 }

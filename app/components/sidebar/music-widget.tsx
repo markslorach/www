@@ -3,11 +3,13 @@ import Link from "next/link";
 import Image from "next/image";
 import { Headphones, Music2 } from "lucide-react";
 import { useLastPlayed } from "@/hooks/useLastPlayed";
+import MusicWidgetLoadingSkeleton from "./music-widget-loading-skeleton";
 
 export default function MusicWidget() {
   const { data: lastPlayed, isLoading, isError } = useLastPlayed();
 
-  if (isLoading) return <p>Loading...</p>;
+  // Create loading and error skeletons
+  if (isLoading) return <MusicWidgetLoadingSkeleton />;
   if (isError) return <p>Error!</p>;
 
   if (!lastPlayed) return null;
