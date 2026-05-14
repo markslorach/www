@@ -34,7 +34,7 @@ export default function MusicWidget() {
       )}
 
       {!lastPlayed.artwork && (
-        <div className="absolute inset-0 -z-10 bg-linear-to-br from-blue-500/15 to-pink-500/10" />
+        <div className="absolute inset-0 -z-10 bg-linear-to-br from-blue-500/15 to-gray-500/10" />
       )}
 
       <div className="flex items-center justify-between">

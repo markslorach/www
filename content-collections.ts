@@ -9,8 +9,9 @@ const projects = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string(),
-    heroImage: z.string(),
+    heroImage: z.string().optional(),
     github: z.string(),
+    order: z.number(),
     content: z.string(),
   }),
   transform: async (document, context) => {
