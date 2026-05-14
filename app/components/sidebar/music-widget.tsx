@@ -1,9 +1,9 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import { Headphones, Music2 } from "lucide-react";
 import { useLastPlayed } from "@/hooks/useLastPlayed";
-import MusicWidgetLoadingSkeleton from "./music-widget-error-state";
+import { Headphones, Music2 } from "lucide-react";
+import MusicWidgetLoadingSkeleton from "./music-widget-loading-skeleton";
 import MusicWidgetErrorState from "./music-widget-error-state";
 
 export default function MusicWidget() {
@@ -11,7 +11,6 @@ export default function MusicWidget() {
 
   if (isLoading) return <MusicWidgetLoadingSkeleton />;
 
-  // Create error state skeleton
   if (error) return <MusicWidgetErrorState />;
 
   if (!lastPlayed) return null;
