@@ -15,6 +15,7 @@ export default function MusicWidget() {
 
   if (!lastPlayed) return null;
 
+ // TODO: Extract widget skeleton to wrapper component for reuse in loading and error state components
   return (
     <Link
       href={lastPlayed.url}
