@@ -3,14 +3,16 @@ import Link from "next/link";
 import Image from "next/image";
 import { Headphones, Music2 } from "lucide-react";
 import { useLastPlayed } from "@/hooks/useLastPlayed";
-import MusicWidgetLoadingSkeleton from "./music-widget-loading-skeleton";
+import MusicWidgetLoadingSkeleton from "./music-widget-error-state";
+import MusicWidgetErrorState from "./music-widget-error-state";
 
 export default function MusicWidget() {
-  const { data: lastPlayed, isLoading, isError } = useLastPlayed();
+  const { data: lastPlayed, isLoading, error } = useLastPlayed();
 
-  // Create loading and error skeletons
   if (isLoading) return <MusicWidgetLoadingSkeleton />;
-  if (isError) return <p>Error!</p>;
+
+  // Create error state skeleton
+  if (error) return <MusicWidgetErrorState />;
 
   if (!lastPlayed) return null;
 
@@ -20,7 +22,7 @@ export default function MusicWidget() {
       target="_blank"
       className="relative flex flex-col gap-2 overflow-clip rounded-md border p-2 shadow-xs transition-transform duration-200 ease-in-out select-none hover:scale-102"
     >
-      {lastPlayed.artwork ? (
+      {lastPlayed.artwork && (
         <Image
           src={lastPlayed.artwork}
           alt=""
@@ -29,7 +31,9 @@ export default function MusicWidget() {
           draggable={false}
           className="absolute inset-0 -z-10 scale-150 object-cover opacity-15 blur-sm"
         />
-      ) : (
+      )}
+
+      {!lastPlayed.artwork && (
         <div className="absolute inset-0 -z-10 bg-linear-to-br from-blue-500/15 to-pink-500/10" />
       )}
 
@@ -46,7 +50,7 @@ export default function MusicWidget() {
 
       <div className="flex items-center gap-2">
         <div className="relative size-14 shrink-0 overflow-hidden rounded-md shadow-xs">
-          {lastPlayed.artwork ? (
+          {lastPlayed.artwork && (
             <Image
               src={lastPlayed.artwork}
               alt={`${lastPlayed.album} artwork`}
@@ -55,7 +59,9 @@ export default function MusicWidget() {
               draggable={false}
               className="block scale-104 object-cover"
             />
-          ) : (
+          )}
+
+          {!lastPlayed.artwork && (
             <div className="bg-muted-foreground/10 flex size-full items-center justify-center">
               <Music2 className="text-muted-foreground/50 size-4" />
             </div>

@@ -1,7 +1,7 @@
 import { Skeleton } from "@/components/ui/skeleton";
 import { Headphones } from "lucide-react";
 
-export default function MusicWidgetLoadingSkeleton() {
+export default function MusicWidgetErrorState() {
   return (
     <div className="bg-muted-foreground/20 flex flex-col gap-2 rounded-md border p-2 shadow-xs">
       <div className="flex items-center justify-between">
@@ -16,10 +16,10 @@ export default function MusicWidgetLoadingSkeleton() {
       </div>
       <div className="flex items-center gap-2">
         <Skeleton className="size-14" />
-        
+
         <div className="flex min-w-0 flex-col gap-1">
-          <Skeleton className="h-3.5 w-20" />
-          <Skeleton className="h-3 w-30" />
+          <Skeleton className="h-3.5 w-20 rounded-sm" />
+          <Skeleton className="h-3 w-30 rounded-sm" />
         </div>
       </div>
     </div>
