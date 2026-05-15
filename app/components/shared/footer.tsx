@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="text-muted-foreground text-[13px] leading-none">
+    <footer className="text-muted-foreground/70 text-[13px] leading-none">
       <p>
         Mark Slorach · 2026 · Built with{" "}
         <Link
