@@ -1,6 +1,5 @@
 "use client";
 import useSWR from "swr";
-import { getLastPlayed } from "@/lib/lastfm";
 
 type Track = {
   title: string;
