@@ -12,7 +12,7 @@ const projects = defineCollection({
     heroImage: z.string().optional(),
     github: z.string(),
     order: z.number(),
-    content: z.string(),
+    tags: z.string().array(),
   }),
   transform: async (document, context) => {
     const mdx = await compileMDX(context, document);
