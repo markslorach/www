@@ -1,12 +1,13 @@
+import Hero from "../components/hero";
 import Projects from "../components/projects";
+import Writing from "../components/writing";
 
 export default function Home() {
   return (
     <>
-      <h2 className="text-muted-foreground/70 mb-12 text-sm leading-none uppercase">
-        About
-      </h2>
+      <Hero />
       <Projects />
+      <Writing />
     </>
   );
 }

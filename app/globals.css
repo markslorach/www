@@ -130,6 +130,6 @@
     cursor: pointer;
   }
   html {
-    @apply scrollbar-thumb-blue-400/34 font-sans;
+    @apply scrollbar-thumb-[#E8E3DA] font-sans;
   }
 }
