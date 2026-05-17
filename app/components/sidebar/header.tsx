@@ -8,7 +8,7 @@ export default function Header() {
       <div>
         <div className="flex items-center justify-between">
           <h1 className="mb-0.5 font-medium">@markslorach</h1>
-          <ThemeToggle />
+          {/* <ThemeToggle /> */}
         </div>
 
         <p className="text-muted-foreground text-sm leading-relaxed">

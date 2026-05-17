@@ -7,12 +7,12 @@ export default function Hero() {
       <h1 className="text-foreground text-lg font-medium">👋 Hey, I'm Mark.</h1>
 
       <p>
-        I'm a full-stack developer, self-hosting enthusiast and former
-        videographer & drone operator who made the jump into software.
+        I'm a full-stack developer, self-hosting enthusiast and freelance
+        videographer who made the jump into software.
       </p>
 
       <p>
-        I'm currently building <i>fujirecipes.film</i>, a community for
+        I'm currently building <i>fujirecipes.film</i> - a community for
         discovering and sharing Fujifilm camera recipes. I'll be sharing updates{" "}
         <Link
           href="#"
