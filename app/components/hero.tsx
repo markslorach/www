@@ -7,20 +7,26 @@ export default function Hero() {
       <h1 className="text-foreground text-lg font-medium">👋 Hey, I'm Mark.</h1>
 
       <p>
-        I build web apps with React, Next.js and TypeScript and love exploring
-        everything around it. I'm a self-hosting enthusiast and former
+        I'm a full-stack developer, self-hosting enthusiast and former
         videographer & drone operator who made the jump into software.
       </p>
 
       <p>
-        I'm currently building fujirecipes.film , a community for discovering
-        and sharing Fujifilm camera recipes.
+        I'm currently building <i>fujirecipes.film</i>, a community for
+        discovering and sharing Fujifilm camera recipes. I'll be sharing updates{" "}
+        <Link
+          href="#"
+          className="text-foreground underline decoration-blue-400 decoration-dotted decoration-1 underline-offset-4 hover:decoration-solid"
+        >
+          here
+        </Link>{" "}
+        as it comes together.
       </p>
 
       <p>
-        When I'm not coding, I'm usually out exploring somewhere new. If not,
-        you'll probably find me in a beer garden or falling down a rabbit hole
-        of Docker containers in my homelab.
+        When I'm not coding, I'm usually out exploring. Otherwise, you'll
+        probably find me in a beer garden or falling down a rabbit hole of
+        Docker containers in my homelab.
       </p>
 
       <p>
