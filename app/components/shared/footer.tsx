@@ -4,13 +4,13 @@ export default function Footer() {
   return (
     <footer className="text-muted-foreground/70 text-[13px] leading-none">
       <p>
-        Mark Slorach · 2026 · Built with{" "}
+        Mark Slorach · 2026 · Inspired by{" "}
         <Link
-          href="https://nextjs.org"
+          href="https://deadsimplesites.com"
           target="_blank"
-          className="underline-offset-2 hover:underline"
+          className="hover:text-muted-foreground"
         >
-          Next.js
+          Dead Simple Sites
         </Link>
       </p>
     </footer>

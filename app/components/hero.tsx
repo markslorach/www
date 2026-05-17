@@ -16,7 +16,7 @@ export default function Hero() {
         discovering and sharing Fujifilm camera recipes. I'll be sharing updates{" "}
         <Link
           href="#"
-          className="text-foreground underline decoration-blue-400 decoration-dotted decoration-1 underline-offset-4 hover:decoration-solid"
+          className="hidden text-foreground underline decoration-blue-400 decoration-dotted decoration-1 underline-offset-4 hover:decoration-solid"
         >
           here
         </Link>{" "}
