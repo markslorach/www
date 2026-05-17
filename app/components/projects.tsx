@@ -15,13 +15,13 @@ export default function Projects() {
         Projects
       </h2>
 
-      <div className="flex flex-col gap-10">
+      <div className="flex flex-col gap-6 lg:gap-10">
         {projects.map((project, i) => (
           <div
             key={project._meta.fileName}
             className={cn(
               "transition-opacity duration-200 ease-in-out",
-              index !== null && index !== i && "opacity-70",
+              index !== null && index !== i && "lg:opacity-70",
             )}
             onMouseEnter={() => setIndex(i)}
             onMouseLeave={() => setIndex(null)}

@@ -1,9 +1,14 @@
 import Link from "next/link";
+import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function Hero() {
   return (
-    <section className="text-muted-foreground mb-20 space-y-4 text-[15px]">
+    <section className="text-muted-foreground mb-20 space-y-4 text-[15px] text-pretty">
+      <Avatar className="mb-8 size-18 md:hidden">
+        <AvatarImage src="/images/profile.webp" />
+      </Avatar>
+
       <h1 className="text-foreground text-lg font-medium">👋 Hey, I'm Mark.</h1>
 
       <p>
@@ -16,7 +21,7 @@ export default function Hero() {
         discovering and sharing Fujifilm camera recipes. I'll be sharing updates{" "}
         <Link
           href="#"
-          className="hidden text-foreground underline decoration-blue-400 decoration-dotted decoration-1 underline-offset-4 hover:decoration-solid"
+          className="text-foreground hidden underline decoration-blue-400 decoration-dotted decoration-1 underline-offset-4 hover:decoration-solid"
         >
           here
         </Link>{" "}
