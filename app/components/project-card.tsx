@@ -5,7 +5,7 @@ import { ArrowUpRight } from "lucide-react";
 export default function ProjectCard({ project }: { project: Project }) {
   return (
     <Link href={project.github} target="_blank" className="group relative">
-      <div className="dark:bg-muted-foreground/4 bg-muted-foreground/6 absolute inset-0 -inset-x-4 -inset-y-4 rounded-md opacity-0 transition-opacity duration-200 group-hover:opacity-100" />
+      <div className="dark:bg-muted-foreground/4 bg-muted-foreground/6 absolute inset-0 -inset-x-1 group-hover:-inset-x-4 -inset-y-1 rounded-md opacity-0 transition-all duration-200 group-hover:-inset-y-4 group-hover:opacity-100" />
 
       <div className="relative">
         <div className="mb-2 flex h-min items-center gap-1.5">
