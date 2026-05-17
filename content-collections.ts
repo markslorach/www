@@ -23,6 +23,27 @@ const projects = defineCollection({
   },
 });
 
+const writing = defineCollection({
+  name: "writing",
+  directory: "content/writing",
+  include: "*.mdx",
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    heroImage: z.string().optional(),
+    date: z.string(),
+    tags: z.string().array(),
+    published: z.boolean(),
+  }),
+  transform: async (document, context) => {
+    const mdx = await compileMDX(context, document);
+    return {
+      ...document,
+      mdx,
+    };
+  },
+});
+
 export default defineConfig({
-  content: [projects],
+  content: [projects, writing],
 });
