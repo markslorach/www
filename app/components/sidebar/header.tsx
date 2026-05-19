@@ -1,13 +1,16 @@
 import Image from "next/image";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import ThemeToggle from "./theme-toggle";
+import Link from "next/link";
 
 export default function Header() {
   return (
     <header className="flex flex-col gap-6">
       <div>
         <div className="flex items-center justify-between">
-          <h1 className="font-medium">@markslorach</h1>
+          <Link href="/">
+            <h1 className="font-medium">@markslorach</h1>
+          </Link>
           {/* <ThemeToggle /> */}
         </div>
 

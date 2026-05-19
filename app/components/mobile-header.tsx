@@ -22,7 +22,7 @@ export default function MobileHeader() {
   }, [pathname]);
 
   useEffect(() => {
-    if (width > 768) setIsOpen(false);
+    if (width >= 768) setIsOpen(false);
   }, [width]);
 
   useEffect(() => {
@@ -37,7 +37,7 @@ export default function MobileHeader() {
 
   return (
     <>
-      <div className="z-20 flex justify-between pt-6 pb-10 md:hidden">
+      <header className="z-20 flex justify-between pt-6 pb-10 md:hidden">
         <Link href="/" onClick={() => setIsOpen(false)}>
           <h1 className="font-medium">@markslorach</h1>
         </Link>
@@ -45,7 +45,7 @@ export default function MobileHeader() {
         <button onClick={() => setIsOpen((prev) => !prev)}>
           {!isOpen ? <Menu className="size-5.5" /> : <X className="size-5.5" />}
         </button>
-      </div>
+      </header>
 
       {isOpen && <MobileMenu />}
     </>

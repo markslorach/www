@@ -1,3 +1,4 @@
+import { ViewTransition } from "react";
 import Sidebar from "../components/sidebar/sidebar";
 import Footer from "../components/shared/footer";
 import MobileHeader from "../components/mobile-header";
