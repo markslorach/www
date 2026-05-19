@@ -15,9 +15,9 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
   if (!article) notFound();
 
   return (
-    <article>
-      <h1>{article?.title}</h1>
-      
+    <article className="pb-12">
+      <h1 className="mb-8 text-xl font-medium">{article.title}</h1>
+
       <div>
         <MDXContent code={article.mdx} components={mdxComponents} />
       </div>
