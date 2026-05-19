@@ -1,0 +1,68 @@
+---
+title: Test article
+date: 2026-04-19
+tags: [test]
+published: false
+---
+
+This is a test article to style against. It contains a variety of markdown elements so the article page can be designed properly.
+
+## Headings
+
+# H1 Heading
+## H2 Heading
+### H3 Heading
+
+## Paragraph and inline styles
+
+This is a regular paragraph with **bold text**, *italic text*, and `inline code`. You can also have [a link](https://markslorach.com) inline.
+
+## Blockquote
+
+> The best way to get a project done faster is to start sooner.
+> — Jim Highsmith
+
+## Code block
+
+```typescript
+import { allWriting } from "content-collections";
+
+export default function Writing() {
+  const posts = allWriting
+    .filter((post) => post.published)
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+    .slice(0, 5);
+
+  return (
+    <section>
+      {posts.map((post) => (
+        <PostCard key={post._meta.fileName} post={post} />
+      ))}
+    </section>
+  );
+}
+```
+
+## Unordered list
+
+- Next.js for the framework
+- Tailwind CSS for styling
+- Content Collections for MDX
+- SWR for the Last.fm widget
+
+## Ordered list
+
+1. Set up the content collection schema
+2. Create the MDX file
+3. Build the dynamic route
+4. Style the article page
+
+## Horizontal rule
+
+---
+
+## A second blockquote
+
+> Ship something real rather than wait until everything is perfect.
+
+That's about everything you need to style against.

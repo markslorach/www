@@ -5,7 +5,7 @@ import { Writing } from "@/.content-collections/generated";
 export default function ArticleCard({ article }: { article: Writing }) {
   return (
     <Link
-      href={`/thoughts/${article._meta.path}`}
+      href={`/writing/${article._meta.path}`}
       className="group relative block"
     >
       <div className="dark:bg-muted-foreground/4 bg-muted-foreground/6 absolute -inset-1 hidden rounded-md opacity-0 transition-all duration-200 group-hover:-inset-x-4 group-hover:-inset-y-2 group-hover:opacity-100 lg:block" />
