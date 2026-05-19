@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { useScrollLock } from "usehooks-ts";
+import { useScrollLock, useWindowSize } from "usehooks-ts";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import Navigation from "./sidebar/navigation";
@@ -15,9 +15,15 @@ export default function MobileHeader() {
     autoLock: false,
   });
 
+  const { width } = useWindowSize();
+
   useEffect(() => {
     setIsOpen(false);
   }, [pathname]);
+
+  useEffect(() => {
+    if (width > 768) setIsOpen(false);
+  }, [width]);
 
   useEffect(() => {
     if (isOpen) {
