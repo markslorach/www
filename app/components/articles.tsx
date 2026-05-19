@@ -1,4 +1,4 @@
-"use client";
+"use client"
 import { cn } from "@/lib/utils";
 import { allWritings } from "content-collections";
 import { useState } from "react";
@@ -19,7 +19,7 @@ export default function Articles() {
         Thoughts
       </h2>
 
-      <div className="flex flex-col gap-5 lg:gap-10">
+      <div className="flex flex-col gap-5 lg:gap-6">
         {articles.map((article, i) => (
           <div
             key={article._meta.fileName}
