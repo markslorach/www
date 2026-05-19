@@ -29,7 +29,7 @@ const writing = defineCollection({
   include: "*.mdx",
   schema: z.object({
     title: z.string(),
-    description: z.string(),
+    description: z.string().optional(),
     heroImage: z.string().optional(),
     date: z.string(),
     tags: z.string().array(),

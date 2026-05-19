@@ -1,13 +1,13 @@
 import Hero from "../components/hero";
 import Projects from "../components/projects";
-import Thoughts from "../components/thoughts";
+import Articles from "../components/articles";
 
 export default function Home() {
   return (
     <>
       <Hero />
       <Projects />
-      <Thoughts />
+      <Articles />
     </>
   );
 }
