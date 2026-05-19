@@ -32,7 +32,7 @@ export default function MobileHeader() {
   return (
     <>
       <div className="z-20 flex justify-between pt-6 pb-10 md:hidden">
-        <Link href="/">
+        <Link href="/" onClick={() => setIsOpen(false)}>
           <h1 className="font-medium">@markslorach</h1>
         </Link>
 
