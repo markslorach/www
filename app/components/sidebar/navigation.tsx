@@ -14,7 +14,7 @@ export default function Navigation() {
   const pathname = usePathname();
 
   return (
-    <nav className="flex flex-1 flex-col gap-2 md:gap-1 py-12">
+    <nav className="flex flex-1 flex-col gap-2 md:gap-1 md:py-12">
       {navLinks.map((link) => (
         <Link
           href={link.href}
