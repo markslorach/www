@@ -5,6 +5,12 @@ import { mdxComponents } from "@/mdx-components";
 import { format, parseISO } from "date-fns";
 import { ArrowLeft } from "lucide-react";
 
+export function generateStaticParams() {
+  return allWritings
+    .filter((article) => article.published)
+    .map((article) => ({ slug: article._meta.path }));
+}
+
 type ArticlePageProps = {
   params: Promise<{ slug: string }>;
 };
