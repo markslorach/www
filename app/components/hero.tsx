@@ -9,7 +9,7 @@ export default function Hero() {
         <AvatarImage src="/images/profile.webp" />
       </Avatar>
 
-      <h1 className="text-foreground text-lg font-medium">👋 Hey, I'm Mark.</h1>
+      <h1 className="text-foreground text-xl font-medium">👋 Hey, I'm Mark.</h1>
 
       <p>
         I'm a full-stack developer, self-hosting enthusiast and freelance

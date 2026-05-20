@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
+@import "highlight.js/styles/atom-one-dark.css";
 @plugin "@tailwindcss/typography";
 
 @custom-variant dark (&:is(.dark *));
@@ -86,7 +87,7 @@
 
 .dark {
   --background: #171717;
-  --foreground: #e8e3da;
+  --foreground: #eae6e0;
   --card: oklch(0.205 0 0);
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.205 0 0);
@@ -130,6 +131,46 @@
     cursor: pointer;
   }
   html {
-    @apply scrollbar-thumb-[#E8E3DA] font-sans;
+    @apply scrollbar-thumb-[#E8E3DA] font-sans md:overflow-y-scroll;
   }
+}
+
+.prose-article {
+  /* base */
+  @apply prose prose-invert;
+
+  /* headings */
+  @apply prose-headings:text-foreground prose-headings:font-medium prose-h1:text-2xl prose-h2:text-lg prose-h3:text-base;
+  @apply prose-h2:mt-10 prose-h2:mb-4 prose-h3:mt-8 prose-h3:mb-3;
+
+  /* paragraphs */
+  @apply prose-p:text-muted-foreground prose-p:text-[15px] prose-p:leading-normal;
+
+  /* strong */
+  @apply prose-strong:text-foreground;
+
+  /* links */
+  @apply prose-a:text-foreground prose-a:decoration-blue-400 prose-a:decoration-dotted prose-a:decoration-1 prose-a:underline-offset-4 prose-a:hover:decoration-solid;
+
+  /* lists */
+  @apply prose-ul:text-muted-foreground prose-li:text-[15px] prose-ol:text-muted-foreground prose-li:my-1 marker:text-blue-400;
+
+  /* blockquotes */
+  @apply prose-blockquote:border-blue-400/80 prose-blockquote:text-foreground/80 prose-blockquote:prose-p:text-foreground/80!;
+
+  /* inline code */
+  @apply prose-code:rounded-sm prose-code:bg-muted-foreground/8 prose-code:px-1.5 prose-code:py-0.5 prose-code:text-foreground prose-code:before:content-none prose-code:after:content-none;
+
+  /* code blocks */
+  @apply prose-pre:rounded-md prose-pre:bg-muted-foreground/4 prose-pre:p-0 prose-pre:text-[13px] prose-pre:leading-6;
+
+  /* rules */
+  @apply prose-hr:border-border;
+
+  /* images */
+  @apply prose-img:rounded-md;
+}
+
+.prose-article .hljs {
+  @apply rounded-md bg-transparent;
 }

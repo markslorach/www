@@ -1,68 +1,86 @@
 ---
-title: Test article
+title: Making a Personal Site Feel Maintained
+description: Notes from reshaping a small portfolio site into something easier to keep current.
 date: 2026-04-19
-tags: [test]
+tags: [design, frontend, writing]
 published: false
 ---
 
-This is a test article to style against. It contains a variety of markdown elements so the article page can be designed properly.
+Most personal sites fail quietly. They still load, the links mostly work, and the homepage says roughly the right things, but the whole place starts to feel like it was last touched in a different version of your life.
 
-## Headings
+I wanted this site to feel smaller, calmer, and easier to update. That meant treating the writing page, project list, and tiny details like the music widget as part of the same system instead of a pile of unrelated sections. It also meant resisting the urge to rebuild everything at once.
 
-# H1 Heading
-## H2 Heading
-### H3 Heading
+## A Small Site Is Still a Product
 
-## Paragraph and inline styles
+The useful shift was to stop thinking of the site as a portfolio and start thinking of it as a maintained product. A portfolio tries to impress a stranger in one pass. A product has to keep working after the first pass, including on the days when I only have twenty minutes to publish a note or fix a broken link.
 
-This is a regular paragraph with **bold text**, *italic text*, and `inline code`. You can also have [a link](https://markslorach.com) inline.
+That changed the questions I asked. Instead of asking whether the page looked finished, I asked whether the page made the next edit obvious. A post should be easy to write in `content/writing`, a project should have a clear thumbnail, and the layout should not collapse when a title runs long.
 
-## Blockquote
+> A personal site does not need to be big. It needs to feel looked after.
 
-> The best way to get a project done faster is to start sooner.
-> — Jim Highsmith
+That sentence became the test for most decisions. If a feature made the site feel busier without making it easier to maintain, it usually did not survive.
 
-## Code block
+## The Maintenance Problem
+
+The previous version had the usual personal-site problems:
+
+- The homepage was doing too many jobs at once.
+- The writing system existed, but publishing still felt like a special event.
+- Project summaries were inconsistent, so the list was harder to scan than it needed to be.
+- Styling decisions lived in too many places, which made small changes feel risky.
+
+None of those problems are dramatic. They are exactly the sort of friction that makes you postpone updates. When a site is supposed to represent current work, that is enough to matter.
+
+### Make the Default Path Boring
+
+The best improvement was making the happy path intentionally plain. A new article should only need frontmatter, a few headings, and normal Markdown. The styling can do the rest.
+
+For example, the publishing logic should be easy to read at a glance:
 
 ```typescript
-import { allWriting } from "content-collections";
+import { allWritings } from "content-collections";
 
-export default function Writing() {
-  const posts = allWriting
-    .filter((post) => post.published)
-    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
-    .slice(0, 5);
-
-  return (
-    <section>
-      {posts.map((post) => (
-        <PostCard key={post._meta.fileName} post={post} />
-      ))}
-    </section>
-  );
+export function getPublishedArticles() {
+  return allWritings
+    .filter((article) => article.published)
+    .sort(
+      (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
+    );
 }
 ```
 
-## Unordered list
+There is nothing clever in that code, which is the point. A personal site has enough surface area without hiding the simple parts behind unnecessary abstractions.
 
-- Next.js for the framework
-- Tailwind CSS for styling
-- Content Collections for MDX
-- SWR for the Last.fm widget
+## What Stayed
 
-## Ordered list
+Some pieces were already working. The sidebar still gives the site a clear owner, the project list still leads with real work, and the dark theme still suits the tone. I kept those parts and spent most of the effort on spacing, hierarchy, and defaults.
 
-1. Set up the content collection schema
-2. Create the MDX file
-3. Build the dynamic route
-4. Style the article page
+<figure>
+  <img src="/images/profile.webp" alt="The profile image used in the site sidebar" />
+  <figcaption>
+    Keeping the sidebar image visible gives the site a human anchor without making every page feel like a landing page.
+  </figcaption>
+</figure>
 
-## Horizontal rule
+The biggest change was more editorial than technical: every component now has to earn its space. **Strong text** should make a sentence easier to scan, not louder. *Emphasis* should feel like a change in tone, not decoration. Links should be obvious enough to find, but quiet enough to read past.
+
+## The Publishing Checklist
+
+Before I publish a new post, I run through a small checklist:
+
+1. Write the rough version in plain Markdown.
+2. Check that headings describe the shape of the argument.
+3. Add links only where they help the reader leave with more context.
+4. Make sure the final paragraph actually lands the point.
+
+That process is deliberately lightweight. If it grows into a production ceremony, I will stop using it.
 
 ---
 
-## A second blockquote
+## The Result
 
-> Ship something real rather than wait until everything is perfect.
+The result is not a bigger site. It is a site with fewer loose ends. The article template handles headings, paragraphs, links, quotes, lists, rules, images, captions, inline code, and highlighted code blocks without each post needing custom layout work.
 
-That's about everything you need to style against.
+That is the real win. When the system is boring in the right places, the writing can be more specific. I can publish a short note about [a project I am building](https://markslorach.com), document a decision, or leave myself a clear trail for the next round of changes.
+
+The site feels maintained because the maintenance path is now part of the design.

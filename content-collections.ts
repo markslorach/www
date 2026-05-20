@@ -1,5 +1,6 @@
 import { defineCollection, defineConfig } from "@content-collections/core";
 import { compileMDX } from "@content-collections/mdx";
+import rehypeHighlight from "rehype-highlight";
 import { z } from "zod";
 
 const projects = defineCollection({
@@ -36,7 +37,10 @@ const writing = defineCollection({
     published: z.boolean(),
   }),
   transform: async (document, context) => {
-    const mdx = await compileMDX(context, document);
+    const mdx = await compileMDX(context, document, {
+      cwd: process.cwd(),
+      rehypePlugins: [rehypeHighlight],
+    });
     return {
       ...document,
       mdx,
