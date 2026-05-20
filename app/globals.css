@@ -156,7 +156,7 @@
   @apply prose-ul:text-muted-foreground prose-li:text-[15px] prose-ol:text-muted-foreground prose-li:my-1 marker:text-blue-400;
 
   /* blockquotes */
-  @apply prose-blockquote:border-blue-400/80 prose-blockquote:text-foreground/80 prose-blockquote:prose-p:text-foreground/80!;
+  @apply prose-blockquote:border-l-2 prose-blockquote:border-blue-400/80 prose-blockquote:text-foreground/80 prose-blockquote:prose-p:text-foreground/80!;
 
   /* inline code */
   @apply prose-code:rounded-sm prose-code:bg-muted-foreground/8 prose-code:px-1.5 prose-code:py-0.5 prose-code:text-foreground prose-code:before:content-none prose-code:after:content-none;
