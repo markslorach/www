@@ -1,6 +1,7 @@
 import Sidebar from "../components/sidebar/sidebar";
 import Footer from "../components/shared/footer";
 import MobileHeader from "../components/mobile-header";
+import PageTransition from "../components/page-transition";
 
 export default function SiteLayout({
   children,
@@ -12,7 +13,9 @@ export default function SiteLayout({
       <Sidebar />
       <div className="flex min-w-0 flex-1 flex-col pb-10 md:pt-10">
         <MobileHeader />
-        <main className="flex-1">{children}</main>
+        <PageTransition>
+          <main className="flex-1">{children}</main>
+        </PageTransition>
         <Footer />
       </div>
     </div>
