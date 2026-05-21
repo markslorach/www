@@ -1,5 +1,6 @@
 import { allWritings } from "content-collections";
 import ArticleCard from "./article-card";
+import HoverFadeList from "./shared/hover-fade-list";
 
 export default function ArticleList({ limit }: { limit?: number }) {
   const articles = allWritings
@@ -10,15 +11,10 @@ export default function ArticleList({ limit }: { limit?: number }) {
   if (articles.length === 0) return null;
 
   return (
-    <div className="group/list flex flex-col gap-5 lg:gap-6">
+    <HoverFadeList className="flex flex-col gap-5 lg:gap-6">
       {articles.map((article) => (
-        <div
-          key={article._meta.fileName}
-          className="transition-opacity duration-200 ease-in-out lg:group-hover/list:opacity-70 lg:hover:opacity-100!"
-        >
-          <ArticleCard article={article} />
-        </div>
+        <ArticleCard key={article._meta.fileName} article={article} />
       ))}
-    </div>
+    </HoverFadeList>
   );
 }
