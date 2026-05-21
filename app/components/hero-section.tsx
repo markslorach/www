@@ -46,7 +46,7 @@ export default function HeroSection() {
             aria-hidden="true"
             className="mr-1 inline size-3.5 align-middle"
           />
-          <span className="underline decoration-blue-400 decoration-dotted decoration-1 underline-offset-4 hover:decoration-solid">
+          <span className="underline decoration-[#0892d0] decoration-dotted decoration-1 underline-offset-4 hover:decoration-solid">
             GitHub
           </span>
         </Link>{" "}
@@ -61,7 +61,7 @@ export default function HeroSection() {
             aria-hidden="true"
             className="mr-1 inline size-3.5 align-middle"
           />
-          <span className="underline decoration-blue-400 decoration-dotted decoration-1 underline-offset-4 hover:decoration-solid">
+          <span className="underline decoration-[#0892d0] decoration-dotted decoration-1 underline-offset-4 hover:decoration-solid">
             LinkedIn
           </span>
         </Link>

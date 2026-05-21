@@ -23,7 +23,7 @@ export default function ProjectCard({ project }: { project: Project }) {
             )}
           </div>
 
-          <ArrowUpRight className="size-4 text-blue-400 opacity-100 transition-all duration-200 ease-in-out group-hover:translate-x-0.5 lg:opacity-0 lg:group-hover:opacity-100" />
+          <ArrowUpRight className="size-4 text-[#0892d0] opacity-100 transition-all duration-200 ease-in-out group-hover:translate-x-0.5 lg:opacity-0 lg:group-hover:opacity-100" />
         </div>
 
         <p className="text-muted-foreground mb-4 text-sm">

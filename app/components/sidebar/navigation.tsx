@@ -26,7 +26,7 @@ export default function Navigation() {
         >
           <span
             className={cn(
-              "w-2.5 text-base font-medium text-blue-400 opacity-0 transition-opacity duration-200 ease-in-out group-hover:opacity-100",
+              "w-2.5 text-base font-medium text-[#0892d0] opacity-0 transition-opacity duration-200 ease-in-out group-hover:opacity-100",
               link.href === pathname && "opacity-100",
             )}
           >
