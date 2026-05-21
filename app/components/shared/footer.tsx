@@ -17,7 +17,7 @@ export default function Footer() {
 
       <Link
         href="https://github.com/markslorach/www.git"
-        target="black"
+        target="blank"
         className="hover:text-muted-foreground hidden transition-colors duration-200 ease-in-out sm:flex"
       >
         <FaGithub className="size-4.5" />
