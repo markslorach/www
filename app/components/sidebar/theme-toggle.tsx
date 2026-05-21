@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
-import { IoSunny, IoMoon } from "react-icons/io5";
+import { TbSunHighFilled, TbMoonFilled } from "react-icons/tb";
 
 export default function ThemeToggle() {
   const [mounted, setMounted] = useState(false);
@@ -22,9 +22,9 @@ export default function ThemeToggle() {
       aria-label="Toggle theme"
     >
       {isDark ? (
-        <IoMoon className="size-4.5" />
+        <TbMoonFilled className="size-5 md:size-4.5" />
       ) : (
-        <IoSunny className="size-4.5" />
+        <TbSunHighFilled className="size-5 md:size-4.5" />
       )}
     </button>
   );

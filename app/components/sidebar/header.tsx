@@ -11,7 +11,8 @@ export default function Header() {
           <Link href="/">
             <h1 className="font-medium">@markslorach</h1>
           </Link>
-          {/* <ThemeToggle /> */}
+
+          <ThemeToggle />
         </div>
 
         <p className="text-muted-foreground text-sm leading-relaxed">

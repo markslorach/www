@@ -9,15 +9,15 @@ export default function ProjectCard({ project }: { project: Project }) {
       target="_blank"
       className="group relative block"
     >
-      <div className="dark:bg-muted-foreground/4 bg-muted-foreground/6 absolute -inset-1 hidden rounded-md opacity-0 transition-all duration-200 group-hover:-inset-4 group-hover:opacity-100 lg:block" />
+      <div className="dark:bg-muted-foreground/4 bg-muted-foreground/5 absolute -inset-1 hidden rounded-md opacity-0 transition-all duration-200 group-hover:-inset-4 group-hover:opacity-100 lg:block" />
 
-      <div className="dark:bg-muted-foreground/4 relative rounded-md p-4 lg:bg-transparent lg:p-0 lg:dark:bg-transparent">
+      <div className="dark:bg-muted-foreground/4 bg-muted-foreground/5 relative rounded-md p-4 lg:bg-transparent lg:p-0 lg:dark:bg-transparent">
         <div className="mb-2 flex h-min items-center justify-between gap-1.5 lg:justify-normal">
           <div className="flex items-center gap-2">
             <h3 className="leading-none font-medium">{project.title}</h3>
 
             {project.projectType && (
-              <span className="bg-muted-foreground/10 shadow-xs text-muted-foreground rounded-sm px-2 py-0.5 text-xs">
+              <span className="bg-muted-foreground/10 text-muted-foreground rounded-sm px-2 py-0.5 text-xs shadow-xs">
                 {project.projectType}
               </span>
             )}
