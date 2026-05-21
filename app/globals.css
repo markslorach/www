@@ -131,7 +131,7 @@
     cursor: pointer;
   }
   html {
-    @apply scrollbar-thumb-[#E8E3DA] font-sans md:overflow-y-scroll;
+    @apply scrollbar-thumb-[#E8E3DA] font-sans md:overflow-y-scroll scroll-smooth;
   }
 }
 
