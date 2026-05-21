@@ -15,6 +15,7 @@ const projects = defineCollection({
     projectType: z.string().optional(),
     order: z.number(),
     tags: z.string().array(),
+    content: z.string(),
   }),
   transform: async (document, context) => {
     const mdx = await compileMDX(context, document);
@@ -36,6 +37,7 @@ const writing = defineCollection({
     date: z.string(),
     tags: z.string().array(),
     published: z.boolean(),
+    content: z.string(),
   }),
   transform: async (document, context) => {
     const mdx = await compileMDX(context, document, {
