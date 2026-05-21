@@ -124,7 +124,7 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply text-foreground bg-background;
+    @apply text-foreground bg-background selection:text-foreground/80 selection:bg-[#0892d0]/50;
   }
   button:not(:disabled),
   [role="button"]:not(:disabled) {
