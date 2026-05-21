@@ -43,7 +43,7 @@ export default function MobileHeader() {
           <h1 className="font-medium">@markslorach</h1>
         </Link>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3.5">
           <ThemeToggle />
 
           <button onClick={() => setIsOpen((prev) => !prev)}>

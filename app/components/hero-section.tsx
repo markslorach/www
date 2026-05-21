@@ -9,7 +9,7 @@ export default function HeroSection() {
         <AvatarImage src="/images/profile.webp" />
       </Avatar>
 
-      <h1 className="text-foreground text-xl font-medium tracking-tight">👋 Hey, I'm Mark.</h1>
+      <h1 className="text-foreground text-xl leading-6 font-medium tracking-tight md:mb-4.5">👋 Hey, I'm Mark.</h1>
 
       <p>
         I'm a full-stack developer, self-hosting enthusiast and freelance

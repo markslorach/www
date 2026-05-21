@@ -33,9 +33,9 @@ export default function ThemeToggle() {
           className="block"
         >
           {isDark ? (
-            <TbMoonFilled className="size-5 md:size-4.5" />
+            <TbMoonFilled className="size-5" />
           ) : (
-            <TbSunHighFilled className="size-5 md:size-4.5" />
+            <TbSunHighFilled className="size-5" />
           )}
         </motion.span>
       </AnimatePresence>

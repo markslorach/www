@@ -8,6 +8,7 @@ export default function PageTransition({
   children: React.ReactNode;
 }) {
   const pathname = usePathname();
+
   return (
     <motion.div
       className="h-full"
