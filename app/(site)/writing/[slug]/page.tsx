@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { allWritings } from "content-collections";
 import { MDXContent } from "@content-collections/mdx/react";
@@ -5,15 +6,34 @@ import { mdxComponents } from "@/mdx-components";
 import { format, parseISO } from "date-fns";
 import { ArrowLeft } from "lucide-react";
 
+type ArticlePageProps = {
+  params: Promise<{ slug: string }>;
+};
+
 export function generateStaticParams() {
   return allWritings
     .filter((article) => article.published)
     .map((article) => ({ slug: article._meta.path }));
 }
 
-type ArticlePageProps = {
-  params: Promise<{ slug: string }>;
-};
+export async function generateMetadata({
+  params,
+}: ArticlePageProps): Promise<Metadata> {
+  const { slug } = await params;
+
+  const article = allWritings.find(
+    (article) => article.published && article._meta.path === slug,
+  );
+
+  if (!article) {
+    return { title: "Post not found" };
+  }
+
+  return {
+    title: article.title,
+    description: article.description,
+  };
+}
 
 export default async function ArticlePage({ params }: ArticlePageProps) {
   const { slug } = await params;
