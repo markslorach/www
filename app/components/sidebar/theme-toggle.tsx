@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import { TbSunHighFilled, TbMoonFilled } from "react-icons/tb";
+import { AnimatePresence, motion } from "motion/react";
 
 export default function ThemeToggle() {
   const [mounted, setMounted] = useState(false);
@@ -10,6 +11,7 @@ export default function ThemeToggle() {
   useEffect(() => {
     setMounted(true);
   }, []);
+  
 
   if (!mounted) return null;
 
@@ -21,11 +23,22 @@ export default function ThemeToggle() {
       className="text-muted-foreground hover:text-foreground transition-colors duration-200 ease-in-out"
       aria-label="Toggle theme"
     >
-      {isDark ? (
-        <TbMoonFilled className="size-5 md:size-4.5" />
-      ) : (
-        <TbSunHighFilled className="size-5 md:size-4.5" />
-      )}
+      <AnimatePresence mode="wait" initial={false}>
+        <motion.span
+          key={isDark ? "moon" : "sun"}
+          initial={{ rotate: -45, scale: 0.5  }}
+          animate={{ rotate: 0, scale: 1 }}
+          exit={{ rotate: 45, scale: 0.5 }}
+          transition={{ duration: 0.15, ease: "easeInOut" }}
+          className="block"
+        >
+          {isDark ? (
+            <TbMoonFilled className="size-5 md:size-4.5" />
+          ) : (
+            <TbSunHighFilled className="size-5 md:size-4.5" />
+          )}
+        </motion.span>
+      </AnimatePresence>
     </button>
   );
 }
