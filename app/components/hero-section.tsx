@@ -5,7 +5,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 export default function HeroSection() {
   return (
     <section className="text-muted-foreground mb-20 space-y-4 text-[15px] text-pretty">
-      <Avatar className="mb-8 size-18 md:hidden">
+      <Avatar className="mb-6 size-18 md:hidden after:border-none">
         <AvatarImage src="/images/profile.webp" />
       </Avatar>
 
@@ -46,7 +46,7 @@ export default function HeroSection() {
             aria-hidden="true"
             className="mr-1 inline size-3.5 align-middle"
           />
-          <span className="underline decoration-[#0892d0] decoration-dotted decoration-1 underline-offset-4 hover:decoration-solid">
+          <span className="underline decoration-blue-400 decoration-dotted decoration-1 underline-offset-4 hover:decoration-solid">
             GitHub
           </span>
         </Link>{" "}
