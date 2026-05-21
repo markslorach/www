@@ -10,17 +10,15 @@ export default function ArticleList({ limit }: { limit?: number }) {
   if (articles.length === 0) return null;
 
   return (
-    <section className="mb-20">
-      <div className="group flex flex-col gap-5 lg:gap-6">
-        {articles.map((article) => (
-          <div
-            key={article._meta.fileName}
-            className="transition-opacity duration-200 ease-in-out lg:group-hover:opacity-70 lg:hover:opacity-100!"
-          >
-            <ArticleCard article={article} />
-          </div>
-        ))}
-      </div>
-    </section>
+    <div className="group flex flex-col gap-5 lg:gap-6">
+      {articles.map((article) => (
+        <div
+          key={article._meta.fileName}
+          className="transition-opacity duration-200 ease-in-out lg:group-hover:opacity-70 lg:hover:opacity-100!"
+        >
+          <ArticleCard article={article} />
+        </div>
+      ))}
+    </div>
   );
 }

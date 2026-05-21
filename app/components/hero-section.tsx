@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
-export default function Hero() {
+export default function HeroSection() {
   return (
     <section className="text-muted-foreground mb-20 space-y-4 text-[15px] text-pretty">
       <Avatar className="mb-8 size-18 md:hidden">

@@ -1,17 +1,22 @@
-import Hero from "../components/hero";
-import Projects from "../components/projects";
+import HeroSection from "../components/hero-section";
+import ProjectList from "../components/project-list";
 import ArticleList from "../components/article-list";
+import SectionHeading from "../components/shared/section-heading";
 
 export default function Home() {
   return (
     <>
-      <Hero />
-      <Projects />
+      <HeroSection />
 
-      {/* <h2 className="text-muted-foreground/50 mb-10 text-sm leading-none font-medium uppercase">
-        Writing
-      </h2> */}
-      <ArticleList limit={5} />
+      <section className="mb-20">
+        <SectionHeading>Projects</SectionHeading>
+        <ProjectList />
+      </section>
+
+      <section className="mb-20">
+        <SectionHeading>Writing</SectionHeading>
+        <ArticleList limit={5} />
+      </section>
     </>
   );
 }
