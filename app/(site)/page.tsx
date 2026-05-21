@@ -13,10 +13,10 @@ export default function Home() {
         <ProjectList />
       </section>
 
-      <section className="mb-20">
+      {/* <section className="mb-20">
         <SectionHeading>Writing</SectionHeading>
         <ArticleList limit={5} />
-      </section>
+      </section> */}
     </>
   );
 }
