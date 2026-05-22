@@ -11,7 +11,6 @@ export default function ThemeToggle() {
   useEffect(() => {
     setMounted(true);
   }, []);
-  
 
   if (!mounted) return null;
 
@@ -26,9 +25,9 @@ export default function ThemeToggle() {
       <AnimatePresence mode="wait" initial={false}>
         <motion.span
           key={isDark ? "moon" : "sun"}
-          initial={{ rotate: -45, scale: 0.5  }}
+          initial={{ rotate: -90, scale: 0.5 }}
           animate={{ rotate: 0, scale: 1 }}
-          exit={{ rotate: 45, scale: 0.5 }}
+          exit={{ rotate: 90, scale: 0.5 }}
           transition={{ duration: 0.15, ease: "easeInOut" }}
           className="block"
         >
