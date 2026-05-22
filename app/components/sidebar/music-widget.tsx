@@ -19,7 +19,7 @@ export default function MusicWidget() {
     <Link
       href={lastPlayed.url}
       target="_blank"
-      className="relative flex flex-col gap-2 overflow-clip rounded-md border p-2 shadow-xs transition-transform duration-200 ease-in-out select-none hover:scale-101"
+      className="relative flex flex-col gap-2 overflow-clip rounded-md border p-2 shadow-xs select-none"
     >
       {lastPlayed.artwork && (
         <Image
