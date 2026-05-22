@@ -4,7 +4,7 @@ import Navigation from "./navigation";
 
 export default function Sidebar() {
   return (
-    <aside className="sticky top-0 hidden h-screen w-56 flex-col overflow-y-auto overflow-x-clip py-10 pr-4 md:flex lg:pr-0">
+    <aside className="sticky top-0 hidden h-screen w-56 flex-col overflow-x-clip overflow-y-auto py-10 pr-4 md:flex lg:pr-0">
       <div className="flex-1">
         <Header />
         <Navigation />
