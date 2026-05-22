@@ -25,9 +25,9 @@ export default function ThemeToggle() {
       <AnimatePresence mode="wait" initial={false}>
         <motion.span
           key={isDark ? "moon" : "sun"}
-          initial={{ rotate: -90, scale: 0.5 }}
-          animate={{ rotate: 0, scale: 1 }}
-          exit={{ rotate: 90, scale: 0.5 }}
+          initial={{ rotate: -180, scale: 0.5, filter: "blur(0.5px)" }}
+          animate={{ rotate: 0, scale: 1, filter: "blur(0px)" }}
+          exit={{ rotate: 180, scale: 0.5, filter: "blur(0.5px)" }}
           transition={{ duration: 0.15, ease: "easeInOut" }}
           className="block"
         >
