@@ -51,7 +51,7 @@
 }
 
 :root {
-  --background: #f4f3ef;
+  --background: #f9f9f7;
   --foreground: #121212;
   --card: #f4f3ef;
   --card-foreground: oklch(0.145 0 0);
@@ -131,7 +131,7 @@
     cursor: pointer;
   }
   html {
-    @apply scrollbar-thumb-[#E8E3DA] font-sans md:overflow-y-scroll scroll-smooth;
+    @apply scrollbar-thumb-[#E8E3DA] scroll-smooth font-sans md:overflow-y-scroll;
   }
 }
 
