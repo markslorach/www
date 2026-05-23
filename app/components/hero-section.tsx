@@ -4,7 +4,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function HeroSection() {
   return (
-    <section className="text-muted-foreground mb-20 space-y-4 text-[15px] text-pretty">
+    <section className="text-muted-foreground mb-20 space-y-5 text-[15px] text-pretty">
       <Avatar className="mb-6 size-18 md:hidden after:border-none">
         <AvatarImage src="/images/profile.webp" />
       </Avatar>

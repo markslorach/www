@@ -7,7 +7,7 @@ export const navLinks = [
   { label: "home", href: "/" },
   { label: "about", href: "/about" },
   { label: "writing", href: "/writing" },
-  // { label: "now", href: "/now" },
+  { label: "uses", href: "/uses" },
 ];
 
 export default function Navigation() {
