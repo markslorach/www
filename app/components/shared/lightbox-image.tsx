@@ -45,28 +45,28 @@ export default function LightboxImage({
             animate={{ opacity: 1 }}
             exit={{
               opacity: 0,
-              transition: { duration: 0.4, ease: "easeInOut", delay: 0.2 },
+              transition: { duration: 0.35, ease: "easeInOut", delay: 0.3 },
             }}
-            transition={{ duration: 0.3, ease: "easeInOut" }}
+            transition={{ duration: 0.25, ease: "easeInOut" }}
             className="bg-background fixed inset-0 z-100 flex cursor-zoom-out items-center justify-center p-4 backdrop-blur-md"
             onClick={() => setIsOpen(false)}
           >
             <button
-              className="text-muted-foreground hover:text-foreground absolute top-6 right-6 z-50 transition-colors duration-200 ease-in-out"
+              className="text-foreground md:text-muted-foreground hover:text-foreground absolute top-6 right-6 z-50 transition-colors duration-200 ease-in-out"
               onClick={() => setIsOpen(false)}
             >
               <X className="size-5.5" />
             </button>
 
             <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
               exit={{
                 opacity: 0,
-                y: 10,
-                transition: { duration: 0.3, ease: "easeInOut" },
+
+                transition: { duration: 0.25, ease: "easeInOut" },
               }}
-              transition={{ duration: 0.5, ease: "easeInOut", delay: 0.05 }}
+              transition={{ duration: 0.5, ease: "easeInOut", delay: 0.3 }}
               className="relative h-full max-h-[90vh] w-full max-w-6xl"
             >
               <Image
