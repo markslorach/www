@@ -25,7 +25,7 @@ export default function Header() {
           src="/images/profile.webp"
           alt="Mark Slorach profile picture"
           fill
-          preload
+          priority
           sizes="400px"
           draggable={false}
           className="rounded-md object-cover"
