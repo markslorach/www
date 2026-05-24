@@ -44,7 +44,7 @@ export default function UsesPage() {
           fill
           preload
           sizes="(max-width: 768px) 100vw, 600px"
-          className="rounded-md"
+          className="rounded-md object-cover"
         />
       </AspectRatio>
 

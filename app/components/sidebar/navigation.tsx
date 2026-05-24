@@ -8,6 +8,7 @@ export const navLinks = [
   { label: "about", href: "/about" },
   { label: "writing", href: "/writing" },
   { label: "uses", href: "/uses" },
+  // { label: "now", href: "/now" },
 ];
 
 export default function Navigation() {
