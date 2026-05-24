@@ -1,9 +1,9 @@
-import Image from "next/image";
 import Link from "next/link";
 import { allUses } from "content-collections";
 import { MDXContent } from "@content-collections/mdx/react";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { mdxComponents } from "@/mdx-components";
+import LightboxImage from "@/app/components/shared/lightbox-image";
 
 export default function UsesPage() {
   const uses = allUses[0];
@@ -37,14 +37,14 @@ export default function UsesPage() {
         </p>
       </section>
 
-      <AspectRatio ratio={3 / 2} className="mb-14">
-        <Image
+      <AspectRatio ratio={3 / 2} className="mb-14 rounded-md">
+        <LightboxImage
           src="/images/desk-setup.webp"
           alt="My desk setup"
           fill
-          priority
+          preload
           sizes="(max-width: 768px) 100vw, 600px"
-          className="rounded-md object-cover"
+          className="rounded-md"
         />
       </AspectRatio>
 
