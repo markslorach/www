@@ -39,7 +39,7 @@ export default function UsesPage() {
 
       <AspectRatio ratio={3 / 2} className="mb-14 rounded-md">
         <LightboxImage
-          src="/images/desk-setup.webp"
+          src="/images/desk.webp"
           alt="My desk setup"
           fill
           preload

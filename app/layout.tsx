@@ -28,7 +28,7 @@ export default function RootLayout({
       lang="en"
       suppressHydrationWarning
       data-scroll-behavior="smooth"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased md:scrollbar-gutter-stable`}
     >
       <body className="flex min-h-full flex-col">
         <ThemeProvider
