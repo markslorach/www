@@ -45,9 +45,9 @@ export default function LightboxImage({
             animate={{ opacity: 1 }}
             exit={{
               opacity: 0,
-              transition: { duration: 0.35, ease: "easeInOut", delay: 0.2 },
+              transition: { duration: 0.4, ease: "easeInOut", delay: 0.2 },
             }}
-            transition={{ duration: 0.25, ease: "easeInOut" }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
             className="bg-background fixed inset-0 z-100 flex cursor-zoom-out items-center justify-center p-4 backdrop-blur-md"
             onClick={() => setIsOpen(false)}
           >
