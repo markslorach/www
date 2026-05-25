@@ -147,7 +147,7 @@
   @apply prose-p:text-muted-foreground prose-p:text-[15px] prose-p:leading-normal;
 
   /* strong */
-  @apply prose-strong:text-foreground;
+  @apply prose-strong:text-foreground prose-strong:font-medium;
 
   /* links */
   @apply prose-a:text-foreground prose-a:decoration-[#0892d0] prose-a:decoration-dotted prose-a:decoration-1 prose-a:underline-offset-4 prose-a:hover:decoration-solid;
