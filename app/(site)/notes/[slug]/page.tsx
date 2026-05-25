@@ -94,7 +94,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
 function BackToPosts() {
   return (
     <Link
-      href="/writing"
+      href="/notes"
       className="text-muted-foreground group hover:text-foreground flex items-center text-sm transition-colors duration-200 ease-in-out"
     >
       <ArrowLeft className="mr-1 size-4 transition-transform duration-200 ease-in-out group-hover:-translate-x-0.5 group-hover:text-blue-400" />
