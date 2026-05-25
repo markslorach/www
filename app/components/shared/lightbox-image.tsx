@@ -30,10 +30,7 @@ export default function LightboxImage({
 
   return (
     <>
-      <div
-        className="absolute inset-0 cursor-zoom-in"
-        onClick={() => setIsOpen(true)}
-      >
+      <div className="cursor-zoom-in" onClick={() => setIsOpen(true)}>
         <Image src={src} alt={alt} className={className} {...props} />
       </div>
 
@@ -67,14 +64,16 @@ export default function LightboxImage({
                 transition: { duration: 0.25, ease: "easeInOut" },
               }}
               transition={{ duration: 0.5, ease: "easeInOut", delay: 0.3 }}
-              className="relative h-full max-h-[90vh] w-full max-w-6xl"
+              className="flex w-full max-w-6xl justify-center"
             >
               <Image
                 src={src}
                 alt={alt}
-                fill
+                width={3722}
+                height={2115}
                 priority
-                className="object-contain"
+                sizes="(max-width: 1152px) 100vw, 1152px"
+                className="h-auto max-h-[90vh] w-auto max-w-full rounded-md"
               />
             </motion.div>
           </motion.div>

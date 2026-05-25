@@ -37,16 +37,15 @@ export default function UsesPage() {
         </p>
       </section>
 
-      <AspectRatio ratio={3 / 2} className="mb-14 rounded-md">
         <LightboxImage
-          src="/images/desk.webp"
+          src="/images/desk-setup-new.webp"
           alt="My desk setup"
-          fill
+          width={3722}
+          height={2115}
           preload
           sizes="(max-width: 768px) 100vw, 600px"
-          className="rounded-md object-cover"
+          className="rounded-md object-cover mb-14"
         />
-      </AspectRatio>
 
       <div className="prose-article prose-li:my-5! mb-20 [&>h2]:mt-14 [&>h2:first-child]:mt-0">
         <MDXContent code={uses.mdx} components={mdxComponents} />
