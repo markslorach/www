@@ -6,7 +6,7 @@ import { Menu, X } from "lucide-react";
 import Navigation from "./sidebar/navigation";
 import MusicWidget from "./sidebar/music-widget";
 import Link from "next/link";
-import ThemeToggle from "./sidebar/theme-toggle";
+// import ThemeToggle from "./sidebar/theme-toggle";
 
 export default function MobileHeader() {
   const [isOpen, setIsOpen] = useState(false);
@@ -44,7 +44,7 @@ export default function MobileHeader() {
         </Link>
 
         <div className="flex items-center gap-3.5">
-          <ThemeToggle />
+          {/* <ThemeToggle /> */}
 
           <button onClick={() => setIsOpen((prev) => !prev)}>
             {!isOpen ? (

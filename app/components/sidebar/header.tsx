@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
-import ThemeToggle from "./theme-toggle";
 import Link from "next/link";
+// import ThemeToggle from "./theme-toggle";
 
 export default function Header() {
   return (
@@ -12,7 +12,7 @@ export default function Header() {
             <h1 className="font-medium">@markslorach</h1>
           </Link>
 
-          <ThemeToggle />
+          {/* <ThemeToggle /> */}
         </div>
 
         <p className="text-muted-foreground text-sm leading-relaxed">
