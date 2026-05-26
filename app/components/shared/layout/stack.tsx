@@ -5,7 +5,7 @@ type SpacerSize = "sm" | "md" | "lg" | "xl" | "2xl";
 
 const gapMap: Record<SpacerSize, string> = {
   sm: "gap-6",
-  md: "gap-9",
+  md: "gap-8",
   lg: "gap-14",
   xl: "gap-20",
   "2xl": "gap-24",
