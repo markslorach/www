@@ -137,7 +137,7 @@
 
 .prose-article {
   /* base */
-  @apply prose prose-invert;
+  @apply prose prose-invert [&>*:last-child]:mb-0!;
 
   /* headings */
   @apply prose-headings:text-foreground prose-headings:font-medium prose-h1:text-2xl prose-h2:text-lg prose-h3:text-base;
@@ -153,7 +153,7 @@
   @apply prose-a:text-foreground prose-a:decoration-[#0892d0] prose-a:decoration-dotted prose-a:decoration-1 prose-a:underline-offset-4 prose-a:hover:decoration-solid;
 
   /* lists */
-  @apply prose-ul:text-muted-foreground prose-li:text-[15px] prose-li:leading-normal prose-ol:text-muted-foreground prose-li:my-1 marker:text-[#0892d0];
+  @apply prose-li:text-[15px] prose-li:leading-normal prose-li:text-muted-foreground prose-li:my-1 marker:text-[#0892d0];
 
   /* blockquotes */
   @apply prose-blockquote:border-l-2 prose-blockquote:border-[#0892d0]/80 prose-blockquote:text-foreground/80 prose-blockquote:prose-p:text-foreground/80!;

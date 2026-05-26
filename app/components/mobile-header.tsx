@@ -4,7 +4,7 @@ import { useScrollLock, useWindowSize } from "usehooks-ts";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import Navigation from "./sidebar/navigation";
-import MusicWidget from "./sidebar/music-widget";
+import MusicWidget from "./sidebar/last-played-widget/music-widget";
 import Link from "next/link";
 // import ThemeToggle from "./sidebar/theme-toggle";
 

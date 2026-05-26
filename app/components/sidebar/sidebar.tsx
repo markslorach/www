@@ -1,5 +1,5 @@
 import Header from "./header";
-import MusicWidget from "./music-widget";
+import MusicWidget from "./last-played-widget/music-widget";
 import Navigation from "./navigation";
 
 export default function Sidebar() {

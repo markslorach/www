@@ -1,54 +1,43 @@
-import Link from "next/link";
 import { allUses } from "content-collections";
 import { MDXContent } from "@content-collections/mdx/react";
 import { mdxComponents } from "@/mdx-components";
 import LightboxImage from "@/app/components/shared/lightbox-image";
+import PageHeader from "@/app/components/shared/page-header";
+import Prose from "@/app/components/shared/layout/prose";
+import Stack from "@/app/components/shared/layout/stack";
+import InlineLink from "@/app/components/shared/inline-link";
 
 export default function UsesPage() {
   const uses = allUses[0];
 
   return (
-    <>
-      <section className="text-muted-foreground mb-14 space-y-4 text-[15px] text-pretty">
-        <h1 className="text-foreground text-xl leading-6 font-medium tracking-tight">
-          /uses
-        </h1>
+    <Stack>
+      <PageHeader title="/uses">
+        A list of the hardware, software and everyday desk setup I use. Inspired
+        by{" "}
+        <InlineLink href="https://uses.tech" target="_blank">
+          uses.tech
+        </InlineLink>{" "}
+        by{" "}
+        <InlineLink href="https://wesbos.com/uses" target="_blank">
+          Wes Bos
+        </InlineLink>
+        .
+      </PageHeader>
 
-        <p className="text-pretty">
-          A list of the hardware, software and everyday desk setup I use.
-          Inspired by{" "}
-          <Link
-            href="https://uses.tech"
-            target="_blank"
-            className="text-foreground underline decoration-[#0892d0] decoration-dotted decoration-1 underline-offset-4 hover:decoration-solid"
-          >
-            uses.tech
-          </Link>{" "}
-          by{" "}
-          <Link
-            href="https://wesbos.com/uses"
-            target="_blank"
-            className="text-foreground underline decoration-[#0892d0] decoration-dotted decoration-1 underline-offset-4 hover:decoration-solid"
-          >
-            Wes Bos
-          </Link>
-          .
-        </p>
-      </section>
+      <LightboxImage
+        src="/images/desk-setup-new.webp"
+        alt="My desk setup"
+        width={3722}
+        height={2115}
+        preload
+        sizes="(max-width: 768px) 100vw, 600px"
+        className="rounded-md object-cover"
+      />
 
-        <LightboxImage
-          src="/images/desk-setup-new.webp"
-          alt="My desk setup"
-          width={3722}
-          height={2115}
-          preload
-          sizes="(max-width: 768px) 100vw, 600px"
-          className="rounded-md object-cover mb-14"
-        />
-
-      <div className="prose-article prose-li:my-4! mb-20 [&>h2]:mt-14 [&>h2:first-child]:mt-0">
+      <Prose>
         <MDXContent code={uses.mdx} components={mdxComponents} />
-      </div>
-    </>
+      </Prose>
+    </Stack>
   );
 }

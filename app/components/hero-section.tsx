@@ -1,15 +1,16 @@
-import Link from "next/link";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import InlineLink from "./shared/inline-link";
 
 export default function HeroSection() {
   return (
-    <section className="text-muted-foreground mb-20 space-y-5 text-[15px] text-pretty">
-      <Avatar className="mb-6 size-18 md:hidden after:border-none">
+    <header className="text-muted-foreground flex flex-col gap-5 text-[15px] text-pretty">
+      <Avatar className="mb-1 size-18 after:border-none md:hidden">
         <AvatarImage src="/images/profile.webp" />
       </Avatar>
 
-      <h1 className="text-foreground text-xl leading-6 font-medium tracking-tight md:mb-4.5">👋 Hey, I'm Mark.</h1>
+      <h1 className="text-foreground text-xl leading-6 font-medium tracking-tight">
+        👋 Hey, I'm Mark.
+      </h1>
 
       <p>
         I'm a full-stack developer, self-hosting enthusiast and freelance
@@ -19,12 +20,9 @@ export default function HeroSection() {
       <p>
         I'm currently building <i>fujirecipes.film</i> - a community for
         discovering and sharing Fujifilm camera recipes. I'll be sharing updates{" "}
-        <Link
-          href="#"
-          className="text-foreground hidden underline decoration-blue-400 decoration-dotted decoration-1 underline-offset-4 hover:decoration-solid"
-        >
+        <InlineLink href="#" className="hidden">
           here
-        </Link>{" "}
+        </InlineLink>{" "}
         as it comes together.
       </p>
 
@@ -36,37 +34,23 @@ export default function HeroSection() {
 
       <p>
         Find me on{" "}
-        <Link
+        <InlineLink
           href="https://github.com/markslorach"
           target="_blank"
           aria-label="GitHub"
-          className="text-foreground"
         >
-          <FaGithub
-            aria-hidden="true"
-            className="mr-1 inline size-3.5 align-middle"
-          />
-          <span className="underline decoration-[#0892d0] decoration-dotted decoration-1 underline-offset-4 hover:decoration-solid">
-            GitHub
-          </span>
-        </Link>{" "}
+          Github
+        </InlineLink>{" "}
         and{" "}
-        <Link
+        <InlineLink
           href="https://www.linkedin.com/in/markslorach"
           target="_blank"
           aria-label="LinkedIn"
-          className="text-foreground"
         >
-          <FaLinkedin
-            aria-hidden="true"
-            className="mr-1 inline size-3.5 align-middle"
-          />
-          <span className="underline decoration-[#0892d0] decoration-dotted decoration-1 underline-offset-4 hover:decoration-solid">
-            LinkedIn
-          </span>
-        </Link>
+          LinkedIn
+        </InlineLink>
         .
       </p>
-    </section>
+    </header>
   );
 }

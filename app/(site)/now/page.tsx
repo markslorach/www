@@ -1,27 +1,22 @@
-import Link from "next/link";
 import { allNows } from "content-collections";
 import { MDXContent } from "@content-collections/mdx/react";
 import { mdxComponents } from "@/mdx-components";
+import PageHeader from "@/app/components/shared/page-header";
+import Prose from "@/app/components/shared/layout/prose";
+import Stack from "@/app/components/shared/layout/stack";
 
-export default function UsesPage() {
+export default function NowPage() {
   const nows = allNows[0];
 
   return (
-    <>
-      <section className="text-muted-foreground mb-14 space-y-4 text-[15px] text-pretty">
-        <h1 className="text-foreground text-xl leading-6 font-medium tracking-tight">
-          /now
-        </h1>
+    <Stack>
+      <PageHeader title="/now">
+        A look at what is keeping me busy at the moment.
+      </PageHeader>
 
-        <p className="text-pretty">
-          A look at what is keeping me busy at the moment.
-        </p>
-      </section>
-
-      <div className="prose-article prose-li:my-4! mb-20 [&>h2]:mt-14 [&>h2:first-child]:mt-0">
+      <Prose>
         <MDXContent code={nows.mdx} components={mdxComponents} />
-      </div>
-    </>
+      </Prose>
+    </Stack>
   );
 }
- 
