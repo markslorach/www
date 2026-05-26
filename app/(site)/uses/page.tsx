@@ -46,7 +46,7 @@ export default function UsesPage() {
           className="rounded-md object-cover mb-14"
         />
 
-      <div className="prose-article prose-li:my-4.5! mb-20 [&>h2]:mt-14 [&>h2:first-child]:mt-0">
+      <div className="prose-article prose-li:my-4! mb-20 [&>h2]:mt-14 [&>h2:first-child]:mt-0">
         <MDXContent code={uses.mdx} components={mdxComponents} />
       </div>
     </>

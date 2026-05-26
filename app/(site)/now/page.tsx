@@ -18,9 +18,10 @@ export default function UsesPage() {
         </p>
       </section>
 
-      <div className="prose-article prose-li:my-4.5! mb-20 [&>h2]:mt-14 [&>h2:first-child]:mt-0">
+      <div className="prose-article prose-li:my-4! mb-20 [&>h2]:mt-14 [&>h2:first-child]:mt-0">
         <MDXContent code={nows.mdx} components={mdxComponents} />
       </div>
     </>
   );
 }
+ 

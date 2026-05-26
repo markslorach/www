@@ -10,7 +10,7 @@ export default function SectionHeading({
   return (
     <h2
       className={cn(
-        "not-prose text-muted-foreground/50 [&>span]:text-foreground mb-10 text-sm leading-none font-medium uppercase [&>span]:mr-2",
+        "not-prose text-muted-foreground/50 [&>span]:text-foreground mb-9 text-sm leading-none font-medium uppercase [&>span]:mr-2",
         className,
       )}
     >
