@@ -5,8 +5,8 @@ import { cn } from "@/lib/utils";
 
 export const primaryLinks = [
   { label: "home", href: "/" },
-  { label: "about", href: "/about" },
-  { label: "notes", href: "/notes" },
+  // { label: "about", href: "/about" },
+  // { label: "notes", href: "/notes" },
 ];
 
 export const metaLinks = [
