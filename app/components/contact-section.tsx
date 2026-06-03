@@ -30,11 +30,11 @@ export default function ContactSection() {
       <AnimatePresence>
         {isCopied && (
           <motion.span
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.13, ease: "easeInOut" }}
-            className="bg-muted-foreground/10 text-muted-foreground absolute -top-8 -right-6 rounded-sm px-2 py-0.5 text-xs shadow-xs"
+            initial={{ opacity: 0, y: 4 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 4 }}
+            transition={{ duration: 0.15, ease: "easeInOut" }}
+            className="bg-muted-foreground/10 text-muted-foreground absolute -top-7 -right-5 rounded-sm px-2 py-0.5 text-xs shadow-xs"
           >
             copied!
           </motion.span>

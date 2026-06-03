@@ -9,7 +9,7 @@ export default function HeroSection() {
       </Avatar>
 
       <h1 className="text-foreground text-xl leading-6 font-medium tracking-tight">
-        👋🏻 Hey, I'm Mark.
+        👋 Hey, I'm Mark.
       </h1>
 
       <p>
