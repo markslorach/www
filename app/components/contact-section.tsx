@@ -26,7 +26,10 @@ export default function ContactSection() {
   }, [isCopied]);
 
   return (
-    <div className="group relative size-fit" onClick={() => handleCopy(EMAIL)}>
+    <div
+      className="group relative size-fit select-none"
+      onClick={() => handleCopy(EMAIL)}
+    >
       <AnimatePresence>
         {isCopied && (
           <motion.span
