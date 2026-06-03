@@ -3,6 +3,7 @@ import ProjectList from "../components/project-list";
 import ArticleList from "../components/article-list";
 import SectionHeading from "../components/shared/section-heading";
 import Stack from "../components/shared/layout/stack";
+import ContactSection from "../components/contact-section";
 
 export default function Home() {
   return (
@@ -18,6 +19,11 @@ export default function Home() {
         <SectionHeading>Notes</SectionHeading>
         <ArticleList limit={5} />
       </Stack> */}
+
+      <Stack as="section" gap="md">
+        <SectionHeading>Contact</SectionHeading>
+        <ContactSection />
+      </Stack>
     </Stack>
   );
 }
