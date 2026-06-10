@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import Link from "next/link";
+import profileImage from "@/public/images/profile.webp";
 // import ThemeToggle from "./theme-toggle";
 
 export default function Header() {
@@ -22,10 +23,10 @@ export default function Header() {
 
       <AspectRatio ratio={1 / 1}>
         <Image
-          src="/images/profile.webp"
+          src={profileImage}
           alt="Mark Slorach profile picture"
           fill
-          priority
+          placeholder="blur"
           sizes="400px"
           draggable={false}
           className="rounded-md object-cover"
