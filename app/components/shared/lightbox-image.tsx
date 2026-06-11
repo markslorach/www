@@ -45,7 +45,7 @@ export default function LightboxImage({
               transition: { duration: 0.35, ease: "easeInOut", delay: 0.3 },
             }}
             transition={{ duration: 0.25, ease: "easeInOut" }}
-            className="bg-background fixed inset-0 z-100 flex cursor-zoom-out items-center justify-center p-4 backdrop-blur-md"
+            className="bg-background/95 fixed inset-0 z-100 flex cursor-zoom-out items-center justify-center p-4 backdrop-blur-md"
             onClick={() => setIsOpen(false)}
           >
             <button
