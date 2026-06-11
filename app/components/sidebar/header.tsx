@@ -29,6 +29,7 @@ export default function Header() {
           placeholder="blur"
           sizes="400px"
           draggable={false}
+          priority
           className="rounded-md object-cover"
         />
       </AspectRatio>

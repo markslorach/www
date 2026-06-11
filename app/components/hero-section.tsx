@@ -1,12 +1,18 @@
-import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import InlineLink from "./shared/inline-link";
+import Image from "next/image";
+import profileImage from "@/public/images/profile.webp";
 
 export default function HeroSection() {
   return (
     <header className="text-muted-foreground flex flex-col gap-5 text-[15px] text-pretty">
-      <Avatar className="mb-1 size-18 after:border-none md:hidden">
-        <AvatarImage src="/images/profile.webp" />
-      </Avatar>
+      <Image
+        src={profileImage}
+        alt="Mark Slorach profile picture"
+        placeholder="blur"
+        draggable={false}
+        priority
+        className="size-18 rounded-full object-cover md:hidden"
+      />
 
       <h1 className="text-foreground text-xl leading-6 font-medium tracking-tight">
         👋 Hey, I'm Mark.
