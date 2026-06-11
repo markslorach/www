@@ -10,7 +10,6 @@ export default function HeroSection() {
         alt="Mark Slorach profile picture"
         placeholder="blur"
         draggable={false}
-        priority
         className="size-18 rounded-full object-cover md:hidden"
       />
 
