@@ -1,7 +1,7 @@
 export async function GET() {
   const url = `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=markslorach&api_key=${process.env.LASTFM_API_KEY}&format=json&limit=1`;
 
-  const res = await fetch(url, { next: { revalidate: 120 } });
+  const res = await fetch(url);
 
   if (!res.ok) return Response.json({ error: "Failed to fetch track data" }, { status: 500 });
 
