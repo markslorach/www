@@ -9,9 +9,9 @@ import MusicWidgetErrorState from "./music-widget-error-state";
 export default function MusicWidget() {
   const { data: lastPlayed, isLoading, error } = useLastPlayed();
 
-  if (isLoading) return <MusicWidgetLoadingSkeleton />;
+  if (!lastPlayed && isLoading) return <MusicWidgetLoadingSkeleton />;
 
-  if (error) return <MusicWidgetErrorState />;
+  if (!lastPlayed && error) return <MusicWidgetErrorState />;
 
   if (!lastPlayed) return null;
 

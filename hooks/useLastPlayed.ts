@@ -7,7 +7,7 @@ type Track = {
   album: string;
   artist: string;
   artwork: string | null;
-}
+};
 
 const fetcher = (): Promise<Track> =>
   fetch("/api/last-played").then((res) => {
@@ -17,6 +17,7 @@ const fetcher = (): Promise<Track> =>
 
 export function useLastPlayed() {
   return useSWR("last-played", fetcher, {
-    refreshInterval: 60000,
+    refreshInterval: 120000,
+    revalidateOnFocus: false,
   });
 }
