@@ -18,6 +18,7 @@ const fetcher = (): Promise<Track> =>
 export function useLastPlayed() {
   return useSWR("last-played", fetcher, {
     refreshInterval: 120000,
-    revalidateOnFocus: false,
+    revalidateOnFocus: true,
+    revalidateOnReconnect: true,
   });
 }
