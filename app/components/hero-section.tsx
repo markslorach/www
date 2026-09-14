@@ -22,20 +22,6 @@ export default function HeroSection() {
         videographer who made the jump into software.
       </p>
 
-      {/* <p>
-        I'm currently building <i>fujirecipes.film</i> - a community for
-        discovering and sharing Fujifilm camera recipes. I'll be sharing updates{" "}
-        <InlineLink href="#" className="hidden">
-          here
-        </InlineLink>{" "}
-        as it comes together.
-      </p> */}
-
-      <p>
-        I'm gradually shaping this website into a home for my projects, writing,
-        photography and other things I'm working on.
-      </p>
-
       <p>
         When I'm not coding, I'm usually out exploring. Otherwise, you'll
         probably find me in a beer garden or falling down a rabbit hole of
