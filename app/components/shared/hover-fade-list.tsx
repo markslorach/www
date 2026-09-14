@@ -19,8 +19,8 @@ export default function HoverFadeList({
         <div
           key={i}
           className={cn(
-            "transition-opacity duration-200 ease-in-out",
-            index !== null && index !== i && "lg:opacity-70",
+            "transition-opacity ease-in-out",
+            index !== null && index !== i && "opacity-60",
           )}
           onMouseEnter={() => setIndex(i)}
           onMouseLeave={() => setIndex(null)}

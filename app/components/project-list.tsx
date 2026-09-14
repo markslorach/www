@@ -10,7 +10,7 @@ export default function ProjectList({ limit }: { limit?: number }) {
   if (projects.length === 0) return null;
 
   return (
-    <HoverFadeList className="flex flex-col gap-5 lg:gap-10">
+    <HoverFadeList className="flex flex-col gap-5">
       {projects.map((project) => (
         <ProjectCard key={project._meta.fileName} project={project} />
       ))}

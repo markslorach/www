@@ -2,7 +2,7 @@ import Image from "next/image";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import Link from "next/link";
 import profileImage from "@/public/images/profile.webp";
-// import ThemeToggle from "./theme-toggle";
+import ThemeToggle from "./theme-toggle";
 
 export default function Header() {
   return (

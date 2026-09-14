@@ -12,7 +12,7 @@ export default function Home() {
 
       <Stack as="section" gap="md">
         <SectionHeading>Projects</SectionHeading>
-        <ProjectList limit={4} />
+        <ProjectList limit={3} />
       </Stack>
 
       {/* <Stack as="section" gap="md">

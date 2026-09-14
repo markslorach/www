@@ -9,10 +9,10 @@ export default function ProjectCard({ project }: { project: Project }) {
       target="_blank"
       className="group relative block"
     >
-      <div className="dark:bg-muted-foreground/4 bg-muted-foreground/5 absolute -inset-1 hidden rounded-md opacity-0 transition-all duration-200 group-hover:-inset-4 group-hover:opacity-100 lg:block" />
-
-      <div className="dark:bg-muted-foreground/4 bg-muted-foreground/5 relative rounded-md p-4 lg:bg-transparent lg:p-0 lg:dark:bg-transparent">
-        <div className="mb-2 flex h-min items-center justify-between gap-1.5 lg:justify-normal">
+      {/* <div className="dark:bg-muted-foreground/4 bg-muted-foreground/5 absolute -inset-1 hidden rounded-md opacity-0 transition-all duration-200 group-hover:-inset-4 group-hover:opacity-100 lg:block" /> */}
+      {/* lg:bg-transparent lg:p-0 lg:dark:bg-transparent - removed from containing div - kept for reference */}
+      <div className="dark:bg-muted-foreground/4 bg-muted-foreground/5 relative rounded-md p-4">
+        <div className="mb-2 flex h-min items-center justify-between gap-1.5">
           <div className="flex items-center gap-2">
             <h3 className="leading-none font-medium">{project.title}</h3>
 
