@@ -157,15 +157,18 @@
   * {
     @apply border-border outline-ring/50;
   }
-  body {
-    @apply text-foreground bg-background selection:text-foreground/80 selection:bg-[#0892d0]/50;
+
+  html {
+    @apply scrollbar-thumb-muted-foreground scroll-smooth font-sans motion-reduce:scroll-auto;
   }
+
+  body {
+    @apply bg-background text-foreground selection:bg-primary/30 selection:text-foreground;
+  }
+
   button:not(:disabled),
   [role="button"]:not(:disabled) {
     cursor: pointer;
-  }
-  html {
-    @apply scrollbar-thumb-muted-foreground scroll-smooth font-sans;
   }
 }
 
