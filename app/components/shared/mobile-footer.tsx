@@ -1,9 +1,9 @@
 import Link from "next/link";
 import { ArrowUpRightIcon } from "@heroicons/react/24/solid";
 
-export default function Footer() {
+export default function MobileFooter() {
   return (
-    <footer className="text-muted-foreground border-t-muted-border hidden items-center justify-between border-t pt-5 font-mono text-[11px] md:flex">
+    <footer className="text-muted-foreground border-t-muted-border flex h-17 items-center justify-between border-t font-mono text-[11px] md:hidden">
       <p>Mark Slorach - 2026</p>
 
       <Link

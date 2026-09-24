@@ -1,7 +1,8 @@
-import Sidebar from "../components/sidebar/sidebar";
-import Footer from "../components/shared/footer";
-import MobileHeader from "../components/mobile-header";
 import PageTransition from "../components/shared/page-transition";
+import MobileHeader from "../components/shared/mobile-header";
+import Footer from "../components/shared/footer";
+import MobileFooter from "../components/shared/mobile-footer";
+import SiteHeader from "../components/shared/site-header";
 
 export default function SiteLayout({
   children,
@@ -9,18 +10,17 @@ export default function SiteLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="mx-auto flex min-h-svh w-full max-w-4xl gap-18 px-6 md:px-4 lg:gap-26">
-      <Sidebar />
-      <div className="flex min-w-0 flex-1 flex-col pb-10 md:pt-10">
+    <div className="px-5 sm:px-6 md:px-8">
+      <div className="mx-auto flex min-h-svh w-full max-w-220 flex-col md:pt-14 md:pb-14">
+        <SiteHeader />
         <MobileHeader />
 
         <PageTransition>
-          <main className="flex-1">{children}</main>
+          <main className="py-20 md:py-24">{children}</main>
         </PageTransition>
 
-        <div className="mt-20">
-          <Footer />
-        </div>
+        <Footer />
+        <MobileFooter />
       </div>
     </div>
   );

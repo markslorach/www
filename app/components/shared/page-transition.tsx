@@ -17,7 +17,7 @@ export default function PageTransition({
 
   return (
     <motion.div
-      className="h-full"
+      className="flex-1"
       key={pathname}
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
