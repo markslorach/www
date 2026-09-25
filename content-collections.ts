@@ -13,6 +13,7 @@ const projects = defineCollection({
     heroImage: z.string().optional(),
     github: z.string(),
     projectType: z.string().optional(),
+    caseStudy: z.boolean().default(false),
     order: z.number(),
     tags: z.string().array(),
     content: z.string(),

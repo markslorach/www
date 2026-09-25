@@ -28,7 +28,7 @@ export default function SiteHeader() {
               key={link.href}
               href={link.href}
               className={cn({
-                "group hover:text-foreground relative flex items-center transition-colors": true,
+                "group hover:text-foreground relative flex items-center font-medium transition-colors": true,
                 "text-foreground": pathname === link.href,
               })}
             >

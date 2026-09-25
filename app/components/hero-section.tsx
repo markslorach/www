@@ -1,20 +1,13 @@
 import InlineLink from "./shared/inline-link";
-import Section from "./shared/layout/section";
+import SplitSection from "./shared/layout/split-section";
+import SectionMarker from "./shared/section-marker";
 import Polaroid from "./polaroid";
 
 export default function HeroSection() {
   return (
-    <Section>
+    <SplitSection>
       <div className="flex flex-col gap-7.5 md:max-h-73.5 md:w-50 md:justify-between md:pt-3.5">
-        <p className="flex w-fit gap-1.75 font-mono text-[10px] font-medium tracking-[0.16em] uppercase md:text-[11px]">
-          <span
-            aria-hidden="true"
-            className="text-primary text-[11px] font-bold tracking-normal"
-          >
-            /
-          </span>
-          Home
-        </p>
+        <SectionMarker>Home</SectionMarker>
 
         <Polaroid />
       </div>
@@ -57,6 +50,6 @@ export default function HeroSection() {
           </p>
         </div>
       </div>
-    </Section>
+    </SplitSection>
   );
 }

@@ -1,37 +1,57 @@
 import Link from "next/link";
 import { Project } from "@/.content-collections/generated";
-import { ArrowUpRight } from "lucide-react";
+import { cn } from "@/lib/utils";
+import { ArrowRightIcon, ArrowUpRightIcon } from "@heroicons/react/24/solid";
 
-export default function ProjectCard({ project }: { project: Project }) {
+export default function ProjectCard({
+  project,
+  index,
+}: {
+  project: Project;
+  index: number;
+}) {
+  const isCaseStudy = project.caseStudy;
+  const href = isCaseStudy ? `/projects/${project._meta.path}` : project.github;
+  const ProjectArrow = isCaseStudy ? ArrowRightIcon : ArrowUpRightIcon;
+
   return (
     <Link
-      href={project.github}
-      target="_blank"
-      className="group relative block"
+      href={href}
+      target={isCaseStudy ? undefined : "_blank"}
+      rel={isCaseStudy ? undefined : "noreferrer"}
+      className="group border-border flex gap-5 border-b pt-6.5 pb-7 focus-visible:outline-2 focus-visible:outline-offset-4 md:gap-7"
     >
-      {/* <div className="dark:bg-muted-foreground/4 bg-muted-foreground/5 absolute -inset-1 hidden rounded-md opacity-0 transition-all duration-200 group-hover:-inset-4 group-hover:opacity-100 lg:block" /> */}
-      {/* lg:bg-transparent lg:p-0 lg:dark:bg-transparent - removed from containing div - kept for reference */}
-      <div className="dark:bg-muted-foreground/4 bg-muted-foreground/5 relative rounded-md p-4">
-        <div className="mb-2 flex h-min items-center justify-between gap-1.5">
-          <div className="flex items-center gap-2">
-            <h3 className="leading-none font-medium">{project.title}</h3>
+      <span className="text-muted-foreground/70 w-7 shrink-0 pt-1.5 font-mono text-[10px] leading-3.5 tracking-[0.08em] md:w-13 md:pt-2 md:text-[11px]">
+        {String(index + 1).padStart(3, "0")}
+      </span>
 
-            {project.projectType && (
-              <span className="bg-muted-foreground/10 text-muted-foreground rounded-sm px-2 py-0.5 text-xs shadow-xs">
-                {project.projectType}
-              </span>
-            )}
+      <div className="flex-1">
+        <div className="flex gap-3 md:gap-6">
+          <h2 className="flex-1 text-xl leading-6 font-medium tracking-[-0.01em] md:text-[22px] md:leading-7">
+            {project.title}
+          </h2>
+
+          <div className="flex h-6 w-26 shrink-0 items-center justify-end md:h-7">
+            <span
+              className={cn({
+                "text-primary flex w-fit items-center gap-1 font-mono text-[10px] leading-2.75 font-medium tracking-[0.08em] uppercase md:gap-1.25 md:leading-3 md:tracking-widest": true,
+                "bg-primary-muted rounded-xs px-2 py-1.5": isCaseStudy,
+              })}
+            >
+              {isCaseStudy ? "Case study" : "GitHub"}
+              <ProjectArrow className="size-2 transition-transform duration-200 group-hover:translate-x-0.5 md:size-2.5" />
+            </span>
           </div>
-
-          <ArrowUpRight className="size-4 text-[#0892d0] opacity-100 transition-all duration-200 ease-in-out group-hover:translate-x-0.5 lg:opacity-0 lg:group-hover:opacity-100" />
         </div>
 
-        <p className="text-muted-foreground mb-4 text-sm">
-          {project.description}
-        </p>
+        <div className="max-w-80 md:max-w-100">
+          <p className="text-body mt-2.5 text-base leading-6.25 md:mt-2 md:text-[17px] md:leading-7">
+            {project.description}
+          </p>
 
-        <div className="text-muted-foreground/70 font-mono text-xs">
-          {project.tags.join(" - ")}
+          <span className="text-muted-foreground mt-2.5 block font-mono text-[10px] leading-3.5 tracking-[0.06em] md:mt-3 md:text-[11px] md:tracking-[0.08em]">
+            {project.tags.join(" - ")}
+          </span>
         </div>
       </div>
     </Link>

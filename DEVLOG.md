@@ -27,3 +27,7 @@ Replaced the desktop sidebar with a site header and nav, added mobile navigation
 ### Redesigned the homepage introduction
 
 Rebuilt the opening section around a responsive editorial layout with a Polaroid-style portrait, clearer type hierarchy and themed links. Added a reusable section layout and supporting colour tokens to carry the design into later pages.
+
+### Redesigned the homepage projects
+
+Rebuilt the homepage projects section with clearer links and a featured path into the Boskalis case study. Added shared split-section and section-marker components so the homepage introduction and future sections follow the same structure.

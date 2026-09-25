@@ -33,7 +33,7 @@ export default function Polaroid() {
         <div
           className={cn({
             "pointer-events-none absolute inset-0 transition-opacity": true,
-            "opacity-50 duration-900 ease-in": isSnowing,
+            "opacity-40 duration-900 ease-in": isSnowing,
             "opacity-0 duration-700 ease-out": !isSnowing,
           })}
         >
