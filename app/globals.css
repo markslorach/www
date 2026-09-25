@@ -162,7 +162,7 @@
   }
 
   html {
-    @apply scrollbar-thumb-muted-foreground scroll-smooth font-sans motion-reduce:scroll-auto;
+    @apply scroll-smooth font-sans motion-reduce:scroll-auto;
   }
 
   body {

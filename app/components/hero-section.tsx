@@ -43,7 +43,7 @@ export default function HeroSection() {
               target="_blank"
               aria-label="GitHub"
             >
-              Github
+              GitHub
             </InlineLink>{" "}
             and{" "}
             <InlineLink
