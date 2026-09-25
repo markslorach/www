@@ -1,4 +1,3 @@
-// app/components/shared/stack.tsx
 import { cn } from "@/lib/utils";
 
 type SpacerSize = "sm" | "md" | "lg" | "xl" | "2xl";

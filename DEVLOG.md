@@ -21,3 +21,9 @@ Connected the shared page, text-selection, scrollbar and motion styles to the ne
 ### Added responsive navigation and theme controls
 
 Replaced the desktop sidebar with a site header and nav, added mobile navigation and footer layouts and restored light and dark theme switching.
+
+## 25 September 2026
+
+### Redesigned the homepage introduction
+
+Rebuilt the opening section around a responsive editorial layout with a Polaroid-style portrait, clearer type hierarchy and themed links. Added a reusable section layout and supporting colour tokens to carry the design into later pages.

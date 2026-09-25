@@ -16,7 +16,7 @@ export default function SiteLayout({
         <MobileHeader />
 
         <PageTransition>
-          <main className="py-20 md:py-24">{children}</main>
+          <main className="py-16 md:py-24">{children}</main>
         </PageTransition>
 
         <Footer />

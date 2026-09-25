@@ -13,7 +13,7 @@ export default function InlineLink({
     <Link
       href={href}
       className={cn(
-        "text-foreground underline decoration-[#0892d0] decoration-dotted decoration-1 underline-offset-4 transition-colors duration-150 hover:decoration-solid",
+        "text-primary decoration-primary underline decoration-dotted decoration-1 underline-offset-4 hover:decoration-solid",
         className,
       )}
       {...props}
