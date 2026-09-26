@@ -6,18 +6,18 @@ import Polaroid from "./polaroid";
 export default function HeroSection() {
   return (
     <SplitSection>
-      <div className="flex flex-col gap-7.5 md:max-h-73.5 md:w-50 md:justify-between md:pt-3.5">
+      <div className="flex flex-col gap-7.5 md:max-h-73.5 md:w-50 md:justify-between md:pt-2.5">
         <SectionMarker>Home</SectionMarker>
 
         <Polaroid />
       </div>
 
       <div className="flex w-full flex-1 flex-col gap-5.5">
-        <h1 className="font-heading text-foreground text-2xl leading-10 font-medium tracking-[-0.02em]">
+        <h1 className="font-heading text-foreground text-[26px] leading-10 font-medium tracking-[-0.02em]">
           Hey, I'm Mark.
         </h1>
 
-        <div className="text-body flex flex-col gap-5 text-lg leading-8 text-pretty md:text-balance">
+        <div className="text-body text-[17px] flex flex-col gap-5 md:text-lg leading-8 text-pretty md:text-balance">
           <p>
             I'm a full-stack developer, self-hosting enthusiast and freelance
             videographer who made the jump into software.

@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { useCopyToClipboard } from "usehooks-ts";
 import { Copy } from "lucide-react";
+import SplitSection from "./shared/layout/split-section";
+import SectionMarker from "./shared/section-marker";
 
 const EMAIL = "hello@markslorach.com";
 
@@ -26,28 +28,45 @@ export default function ContactSection() {
   }, [isCopied]);
 
   return (
-    <div
-      className="group relative size-fit select-none"
-      onClick={() => handleCopy(EMAIL)}
-    >
-      <AnimatePresence>
-        {isCopied && (
-          <motion.span
-            initial={{ opacity: 0, y: 4, rotate: -3 }}
-            animate={{ opacity: 1, y: 0, rotate: 0 }}
-            exit={{ opacity: 0, y: 4, rotate: -3 }}
-            transition={{ duration: 0.15, ease: "easeInOut" }}
-            className="bg-muted-foreground/10 text-muted-foreground absolute -top-7.5 -right-6 rotate-6 rounded-sm px-2 py-0.5 text-xs shadow-xs"
-          >
-            copied!
-          </motion.span>
-        )}
-      </AnimatePresence>
+    <SplitSection className="gap-7.5 md:gap-10">
+      <div className="md:-mt-1 md:min-w-50">
+        <SectionMarker>Contact</SectionMarker>
+      </div>
 
-      <p className="text-muted-foreground group-hover:text-primary cursor-pointer text-[15px] leading-none transition-colors duration-200 ease-in-out">
-        <Copy className="text-primary mr-2 inline size-3.5" />
-        {EMAIL}
-      </p>
-    </div>
+      <div className="border-border w-full border-t pt-5">
+        <div className="flex flex-wrap items-center gap-x-4 gap-y-3">
+          <p className="font-heading text-foreground text-[21px] leading-7 font-[450] tracking-[-0.01em] md:text-[22px]">
+            {EMAIL}
+          </p>
+
+          <div className="relative size-fit select-none">
+            <AnimatePresence>
+              {isCopied && (
+                <motion.span
+                  role="status"
+                  initial={{ opacity: 0, y: 4, rotate: 1 }}
+                  animate={{ opacity: 1, y: 0, rotate: 4 }}
+                  exit={{ opacity: 0, y: 4, rotate: 1 }}
+                  transition={{ duration: 0.15, ease: "easeInOut" }}
+                  className="bg-primary-muted border-primary-border text-primary absolute -top-8 -right-5 z-10 rounded-sm border px-2 py-0.5 font-mono text-[10px] font-medium tracking-[0.08em] whitespace-nowrap uppercase shadow-xs"
+                >
+                  Copied!
+                </motion.span>
+              )}
+            </AnimatePresence>
+
+            <button
+              type="button"
+              onClick={() => handleCopy(EMAIL)}
+              aria-label="Copy email address"
+              className="border-primary-border text-primary hover:bg-primary-muted focus-visible:outline-primary flex items-center gap-1.5 rounded-sm border px-2 py-1.5 font-mono text-[10px] font-medium tracking-[0.12em] uppercase transition-colors duration-200 ease-in-out focus-visible:outline-2 focus-visible:outline-offset-2"
+            >
+              <Copy aria-hidden="true" className="size-3" />
+              Copy
+            </button>
+          </div>
+        </div>
+      </div>
+    </SplitSection>
   );
 }

@@ -11,7 +11,7 @@ export default function Home() {
     <div className="flex flex-col">
       <HeroSection />
 
-      <div className="pt-16 pb-7 md:pt-23 md:pb-15">
+      <div className="pt-16 pb-10 md:pt-23 md:pb-15">
         <SproutSVG />
       </div>
 
@@ -22,10 +22,9 @@ export default function Home() {
         <ArticleList limit={5} />
       </Stack> */}
 
-      <Stack as="section" gap="md" className="pt-26">
-        <SectionHeading>Contact</SectionHeading>
+      <div className="pt-26">
         <ContactSection />
-      </Stack>
+      </div>
     </div>
   );
 }

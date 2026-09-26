@@ -19,7 +19,7 @@ export default function ProjectCard({
       href={href}
       target={isCaseStudy ? undefined : "_blank"}
       rel={isCaseStudy ? undefined : "noreferrer"}
-      className="group border-border flex gap-5 border-b pt-6.5 pb-7 focus-visible:outline-2 focus-visible:outline-offset-4 md:gap-7"
+      className="group border-border flex gap-5 border-b pt-5.5 pb-6 focus-visible:outline-2 focus-visible:outline-offset-4 md:gap-7"
     >
       <span className="text-muted-foreground/70 w-7 shrink-0 pt-1.5 font-mono text-[10px] leading-3.5 tracking-[0.08em] md:w-13 md:pt-2 md:text-[11px]">
         {String(index + 1).padStart(3, "0")}
@@ -27,7 +27,7 @@ export default function ProjectCard({
 
       <div className="flex-1">
         <div className="flex gap-3 md:gap-6">
-          <h2 className="flex-1 text-xl leading-6 font-medium tracking-[-0.01em] md:text-[22px] md:leading-7">
+          <h2 className="font-heading flex-1 text-[21px] leading-7 font-[450] tracking-[-0.01em] md:text-[22px]">
             {project.title}
           </h2>
 

@@ -15,8 +15,8 @@ export default function ProjectSection({ limit }: ProjectSectionProps) {
   if (projects.length === 0) return null;
 
   return (
-    <SplitSection>
-      <div className="md:min-w-50">
+    <SplitSection className="gap-7.5 md:gap-10">
+      <div className="md:min-w-50 md:-mt-1">
         <SectionMarker>Projects</SectionMarker>
       </div>
 

@@ -31,3 +31,13 @@ Rebuilt the opening section around a responsive editorial layout with a Polaroid
 ### Redesigned the homepage projects
 
 Rebuilt the homepage projects section with clearer links and a featured path into the Boskalis case study. Added shared split-section and section-marker components so the homepage introduction and future sections follow the same structure.
+
+## 26 September 2026
+
+### Changed the dark colour palette
+
+Changed the dark theme to warmer neutrals with green accents and red section markers.
+
+### Added the homepage contact section
+
+Added a split contact section with a direct copy interaction and carried Fraunces through the project titles for a more consistent heading hierarchy.
