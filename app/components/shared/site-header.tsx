@@ -34,7 +34,7 @@ export default function SiteHeader() {
             >
               <span
                 className={cn({
-                  "text-primary absolute right-full mr-1 text-xs font-bold opacity-0 transition-opacity group-hover:opacity-100": true,
+                  "text-marker absolute right-full mr-1 text-xs font-bold opacity-0 transition-opacity group-hover:opacity-100": true,
                   "opacity-100": pathname === link.href,
                 })}
                 aria-hidden="true"

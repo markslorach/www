@@ -89,7 +89,7 @@ function MobileMenu({ pathname }: { pathname: string }) {
           >
             <span
               aria-hidden="true"
-              className="text-primary w-2 shrink-0 font-mono text-sm font-bold tracking-[0.04em]"
+              className="text-marker w-2 shrink-0 font-mono text-sm font-bold tracking-[0.04em]"
             >
               {pathname === link.href ? "/" : ""}
             </span>
