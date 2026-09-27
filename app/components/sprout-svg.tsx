@@ -5,7 +5,7 @@ export default function SproutSVG() {
       height="62"
       viewBox="0 0 46 62"
       xmlns="http://www.w3.org/2000/svg"
-      className="text-primary -ml-1.5"
+      className="text-primary -ml-1.5 scale-105"
       stroke="currentColor"
       aria-hidden="true"
     >

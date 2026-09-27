@@ -47,3 +47,9 @@ Added a split contact section with a direct copy interaction and carried Fraunce
 ### Added a custom not-found page
 
 Replaced the generic error state with a responsive Null Island Polaroid and a clearer route home.
+
+## 28 September 2026
+
+### Added the homepage Now section
+
+Added a live homepage snapshot with current Now copy, Glasgow time and weather and the latest played track. Reworked the music card and its loading and error states for the new section.

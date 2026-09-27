@@ -73,6 +73,7 @@ const now = defineCollection({
   directory: "content/now",
   include: "*.mdx",
   schema: z.object({
+    summary: z.string(),
     content: z.string(),
   }),
   transform: async (document, context) => {

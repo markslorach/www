@@ -50,7 +50,7 @@ export default function ProjectCard({
           </p>
 
           <span className="text-muted-foreground mt-2.5 block font-mono text-[10px] leading-3.5 tracking-[0.06em] md:mt-3 md:text-[11px] md:tracking-[0.08em]">
-            {project.tags.join(" - ")}
+            {project.tags.join(" · ")}
           </span>
         </div>
       </div>

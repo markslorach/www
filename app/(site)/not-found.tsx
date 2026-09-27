@@ -27,7 +27,7 @@ export default function NotFound() {
         </div>
       </div>
 
-      <figure className="bg-polaroid relative order-1 mt-10 flex w-fit translate-x-5 scale-[1.15] rotate-[-2.5deg] flex-col self-start rounded-xs px-2 pt-2 shadow-[0_1px_3px_rgb(28_27_24/7%)] md:order-0 md:mt-0 md:translate-x-0 md:self-auto">
+      <figure className="bg-polaroid relative order-1 mt-10 flex w-fit translate-x-5 scale-[1.15] rotate-[-1.5deg] flex-col self-start rounded-xs px-2 pt-2 shadow-[0_1px_3px_rgb(28_27_24/7%)] md:order-0 md:mt-0 md:translate-x-0 md:self-auto">
         <div className="size-44 overflow-clip">
           <NullIslandArtwork />
         </div>
