@@ -41,3 +41,9 @@ Changed the dark theme to warmer neutrals with green accents and red section mar
 ### Added the homepage contact section
 
 Added a split contact section with a direct copy interaction and carried Fraunces through the project titles for a more consistent heading hierarchy.
+
+## 27 September 2026
+
+### Added a custom not-found page
+
+Replaced the generic error state with a responsive Null Island Polaroid and a clearer route home.
