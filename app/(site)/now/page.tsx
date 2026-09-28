@@ -4,8 +4,11 @@ import { mdxComponents } from "@/mdx-components";
 import PageHeader from "@/app/components/shared/page-header";
 import Prose from "@/app/components/shared/layout/prose";
 import Stack from "@/app/components/shared/layout/stack";
+import { blockPage } from "@/lib/block-page";
 
 export default function NowPage() {
+  blockPage();
+
   const nows = allNows[0];
 
   return (

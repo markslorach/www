@@ -34,7 +34,7 @@ export default function NowSection() {
             {now.summary}
           </p>
 
-          <InlineLink
+          {/* <InlineLink
             href="/now"
             className="group mt-4 inline-flex items-center gap-1 font-mono text-[10px] leading-3 font-medium tracking-[0.08em] uppercase md:text-[11px] md:tracking-widest"
           >
@@ -43,7 +43,7 @@ export default function NowSection() {
               className="size-2.5 transition-transform duration-200 group-hover:translate-x-0.5"
               aria-hidden="true"
             />
-          </InlineLink>
+          </InlineLink> */}
         </div>
 
         <div className="w-full shrink-0 rotate-[0.5deg] md:w-60 md:pt-1">

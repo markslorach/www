@@ -6,10 +6,10 @@ import ThemeToggle from "./theme-toggle";
 
 const links = [
   { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
-  { label: "Notes", href: "/notes" },
-  { label: "Uses", href: "/uses" },
-  { label: "Now", href: "/now" },
+  // { label: "About", href: "/about" },
+  // { label: "Notes", href: "/notes" },
+  // { label: "Uses", href: "/uses" },
+  // { label: "Now", href: "/now" },
 ];
 
 export default function SiteHeader() {

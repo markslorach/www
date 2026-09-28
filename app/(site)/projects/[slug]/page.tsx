@@ -4,6 +4,7 @@ import Link from "next/link";
 import { allProjects } from "content-collections";
 import { MDXContent } from "@content-collections/mdx/react";
 import { mdxComponents } from "@/mdx-components";
+import { blockPage } from "@/lib/block-page";
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
 
 type ProjectPageProps = {
@@ -31,6 +32,8 @@ export async function generateMetadata({
 }
 
 export default async function ProjectPage({ params }: ProjectPageProps) {
+  blockPage();
+
   const { slug } = await params;
   const project = allProjects.find((project) => project._meta.path === slug);
 

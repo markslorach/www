@@ -3,6 +3,7 @@ import Link from "next/link";
 import { allWritings } from "content-collections";
 import { MDXContent } from "@content-collections/mdx/react";
 import { mdxComponents } from "@/mdx-components";
+import { blockPage } from "@/lib/block-page";
 import { format, parseISO } from "date-fns";
 import { ArrowLeft } from "lucide-react";
 
@@ -36,6 +37,8 @@ export async function generateMetadata({
 }
 
 export default async function ArticlePage({ params }: ArticlePageProps) {
+  blockPage();
+
   const { slug } = await params;
 
   const article = allWritings.find(

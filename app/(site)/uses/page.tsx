@@ -6,8 +6,11 @@ import PageHeader from "@/app/components/shared/page-header";
 import Prose from "@/app/components/shared/layout/prose";
 import Stack from "@/app/components/shared/layout/stack";
 import InlineLink from "@/app/components/shared/inline-link";
+import { blockPage } from "@/lib/block-page";
 
 export default function UsesPage() {
+  blockPage();
+
   const uses = allUses[0];
 
   return (
