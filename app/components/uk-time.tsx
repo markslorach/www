@@ -1,33 +1,24 @@
 "use client";
 import { useEffect, useState } from "react";
 
-const ukTimeFormatter = new Intl.DateTimeFormat("en-GB", {
-  timeZone: "Europe/London",
-  hour: "2-digit",
-  minute: "2-digit",
-  hour12: false,
-});
-
-const formatUKTime = () => ukTimeFormatter.format(new Date());
+const getTime = () =>
+  new Date().toLocaleTimeString("en-GB", {
+    timeZone: "Europe/London",
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: false,
+  });
 
 export default function UKTime() {
-  const [time, setTime] = useState(formatUKTime);
+  const [time, setTime] = useState(getTime);
 
   useEffect(() => {
-    let timeoutId: number;
+    const timerId = setInterval(() => {
+      setTime(getTime());
+    }, 1_000);
 
-    const updateTime = () => {
-      setTime(formatUKTime());
-
-      const millisecondsUntilNextMinute = 60_000 - (Date.now() % 60_000);
-
-      timeoutId = window.setTimeout(updateTime, millisecondsUntilNextMinute);
-    };
-
-    timeoutId = window.setTimeout(updateTime, 60_000 - (Date.now() % 60_000));
-
-    return () => window.clearTimeout(timeoutId);
+    return () => clearInterval(timerId);
   }, []);
 
-  return <span suppressHydrationWarning>{time}</span>;
+  return <span>{time}</span>;
 }
