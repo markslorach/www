@@ -1,8 +1,11 @@
 "use client";
-import { useEffect, useState } from "react";
+
 import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
+
 // import { AnimatePresence, motion } from "motion/react";
-import { MoonIcon, SunIcon } from "./theme-icons";
+import MoonIcon from "../icons/moon-icon";
+import SunIcon from "../icons/sun-icon";
 
 export default function ThemeToggle() {
   const [mounted, setMounted] = useState(false);
