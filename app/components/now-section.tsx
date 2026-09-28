@@ -17,7 +17,7 @@ export default function NowSection() {
       <div className="md:min-w-50 md:pt-1.5">
         <SectionMarker>Now</SectionMarker>
 
-        <div className="mt-5 flex flex-col gap-1 pl-3.5 font-mono">
+        <div className="mt-5 flex flex-col gap-1 md:pl-3.5 font-mono">
           <p className="text-body text-xs leading-4 font-medium">
             Glasgow, Scotland
           </p>
