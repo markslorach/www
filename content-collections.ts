@@ -52,22 +52,6 @@ const writing = defineCollection({
   },
 });
 
-const uses = defineCollection({
-  name: "uses",
-  directory: "content/uses",
-  include: "*.mdx",
-  schema: z.object({
-    content: z.string(),
-  }),
-  transform: async (document, context) => {
-    const mdx = await compileMDX(context, document);
-    return {
-      ...document,
-      mdx,
-    };
-  },
-});
-
 const now = defineCollection({
   name: "now",
   directory: "content/now",
@@ -86,5 +70,5 @@ const now = defineCollection({
 });
 
 export default defineConfig({
-  content: [projects, writing, uses, now],
+  content: [projects, writing, now],
 });

@@ -1,4 +1,4 @@
-import InlineLink from "./shared/inline-link";
+import AccentLink from "./shared/accent-link";
 import SplitSection from "./shared/layout/split-section";
 import SectionMarker from "./shared/section-marker";
 import Polaroid from "./polaroid";
@@ -17,7 +17,7 @@ export default function HeroSection() {
           Hey, I'm Mark.
         </h1>
 
-        <div className="text-body text-[17px] flex flex-col gap-5 md:text-lg leading-8 text-pretty md:text-balance">
+        <div className="text-body flex flex-col gap-5 text-[17px] leading-8 text-pretty md:text-lg md:text-balance">
           <p>
             I'm a full-stack developer, self-hosting enthusiast and freelance
             videographer who made the jump into software.
@@ -31,21 +31,21 @@ export default function HeroSection() {
 
           <p>
             Find me on{" "}
-            <InlineLink
+            <AccentLink
               href="https://github.com/markslorach"
               target="_blank"
               aria-label="GitHub"
             >
               GitHub
-            </InlineLink>{" "}
+            </AccentLink>{" "}
             and{" "}
-            <InlineLink
+            <AccentLink
               href="https://www.linkedin.com/in/markslorach"
               target="_blank"
               aria-label="LinkedIn"
             >
               LinkedIn
-            </InlineLink>
+            </AccentLink>
             .
           </p>
         </div>

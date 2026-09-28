@@ -53,3 +53,7 @@ Replaced the generic error state with a responsive Null Island Polaroid and a cl
 ### Added the homepage Now section
 
 Added a live homepage snapshot with current Now copy, Glasgow time and weather and the latest played track. Reworked the music card and its loading and error states for the new section.
+
+### Added the Uses page
+
+Added a standalone selection of the hardware, software and self-hosted tools I use, with custom category icons and a closer look at my desk setup. Moved the page away from MDX and updated the shared image lightbox and link styling to support it.

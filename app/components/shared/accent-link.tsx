@@ -1,14 +1,14 @@
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
-type InlineLinkProps = React.ComponentPropsWithoutRef<typeof Link>;
+type AccentLinkProps = React.ComponentPropsWithoutRef<typeof Link>;
 
-export default function InlineLink({
+export default function AccentLink({
   href,
   className,
   children,
   ...props
-}: InlineLinkProps) {
+}: AccentLinkProps) {
   return (
     <Link
       href={href}

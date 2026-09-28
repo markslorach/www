@@ -33,7 +33,7 @@ export default function ContactSection() {
         <SectionMarker>Contact</SectionMarker>
       </div>
 
-      <div className="border-border w-full border-t pt-5">
+      <div className="border-border w-full md:border-t md:pt-5">
         <div className="flex flex-wrap items-center gap-x-4 gap-y-3">
           <p className="font-heading text-foreground text-[21px] leading-7 font-[450] tracking-[-0.01em] md:text-[22px]">
             {EMAIL}

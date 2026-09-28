@@ -2,12 +2,14 @@
 import { useState, useEffect } from "react";
 import Image, { ImageProps } from "next/image";
 import { useScrollLock } from "usehooks-ts";
-import { X } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
+import CloseIcon from "@/app/components/icons/close-icon";
 
 export default function LightboxImage({
   src,
   alt,
+  width,
+  height,
   className,
   ...props
 }: ImageProps) {
@@ -31,7 +33,14 @@ export default function LightboxImage({
   return (
     <>
       <div className="cursor-zoom-in" onClick={() => setIsOpen(true)}>
-        <Image src={src} alt={alt} className={className} {...props} />
+        <Image
+          src={src}
+          alt={alt}
+          width={width}
+          height={height}
+          className={className}
+          {...props}
+        />
       </div>
 
       <AnimatePresence>
@@ -49,10 +58,12 @@ export default function LightboxImage({
             onClick={() => setIsOpen(false)}
           >
             <button
-              className="text-foreground md:text-muted-foreground hover:text-foreground absolute top-6 right-6 z-50 transition-colors duration-200 ease-in-out"
+              type="button"
+              aria-label="Close lightbox"
+              className="text-primary hover:text-foreground absolute top-6 right-6 z-50 transition-colors duration-200 ease-in-out"
               onClick={() => setIsOpen(false)}
             >
-              <X className="size-5.5" />
+              <CloseIcon className="size-6" />
             </button>
 
             <motion.div
@@ -69,11 +80,10 @@ export default function LightboxImage({
               <Image
                 src={src}
                 alt={alt}
-                width={3722}
-                height={2115}
-                priority
+                width={width}
+                height={height}
                 sizes="(max-width: 1152px) 100vw, 1152px"
-                className="h-auto max-h-[90vh] w-auto max-w-full rounded-md"
+                className="h-auto max-h-[90vh] w-auto max-w-full rounded-sm"
               />
             </motion.div>
           </motion.div>

@@ -1,46 +1,57 @@
-import { allUses } from "content-collections";
-import { MDXContent } from "@content-collections/mdx/react";
-import { mdxComponents } from "@/mdx-components";
 import LightboxImage from "@/app/components/shared/lightbox-image";
-import PageHeader from "@/app/components/shared/page-header";
-import Prose from "@/app/components/shared/layout/prose";
-import Stack from "@/app/components/shared/layout/stack";
-import InlineLink from "@/app/components/shared/inline-link";
-import { blockPage } from "@/lib/block-page";
+import SplitSection from "@/app/components/shared/layout/split-section";
+import AccentLink from "@/app/components/shared/accent-link";
+import SectionMarker from "@/app/components/shared/section-marker";
+import UsesSections from "./uses-sections";
 
 export default function UsesPage() {
-  blockPage();
-
-  const uses = allUses[0];
-
   return (
-    <Stack>
-      <PageHeader title="/uses">
-        A list of the hardware, software and everyday desk setup I use. Inspired
-        by{" "}
-        <InlineLink href="https://uses.tech" target="_blank">
-          uses.tech
-        </InlineLink>{" "}
-        by{" "}
-        <InlineLink href="https://wesbos.com/uses" target="_blank">
-          Wes Bos
-        </InlineLink>
-        .
-      </PageHeader>
+    <div>
+      <SplitSection className="items-start">
+        <div className="flex w-full shrink-0 items-center justify-between md:w-50 md:flex-col md:items-start md:gap-2.5 md:pt-2">
+          <SectionMarker>Uses</SectionMarker>
+          <p className="text-muted-foreground font-mono text-[11px] leading-4 tracking-[0.04em]">
+            Updated Sep 2026
+          </p>
+        </div>
 
-      <LightboxImage
-        src="/images/desk-setup-new.webp"
-        alt="My desk setup"
-        width={3722}
-        height={2115}
-        preload
-        sizes="(max-width: 768px) 100vw, 600px"
-        className="rounded-md object-cover"
-      />
+        <div className="w-full flex-1">
+          <header className="flex flex-col gap-5.5">
+            <h1 className="font-heading text-foreground text-[26px] leading-10 font-medium tracking-[-0.02em]">
+              What I use.
+            </h1>
 
-      <Prose>
-        <MDXContent code={uses.mdx} components={mdxComponents} />
-      </Prose>
-    </Stack>
+            <p className="text-body max-w-160 text-[17px] leading-8 text-balance md:text-lg">
+              A selection of the hardware, software and everyday desk setup I
+              use.
+              <br />
+              Inspired by{" "}
+              <AccentLink href="https://uses.tech" target="_blank">
+                uses.tech
+              </AccentLink>{" "}
+              by{" "}
+              <AccentLink href="https://wesbos.com/uses" target="_blank">
+                Wes Bos
+              </AccentLink>
+              .
+            </p>
+          </header>
+
+          <figure className="mt-9">
+            <LightboxImage
+              src="/images/desk-setup-new.webp"
+              alt="My desk setup"
+              width={3722}
+              height={2115}
+              preload
+              sizes="(max-width: 768px) calc(100vw - 40px), 640px"
+              className="h-auto w-full rounded-sm"
+            />
+          </figure>
+        </div>
+      </SplitSection>
+
+      <UsesSections />
+    </div>
   );
 }

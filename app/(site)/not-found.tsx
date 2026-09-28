@@ -1,6 +1,6 @@
 import Link from "next/link";
 import NullIslandArtwork from "@/app/components/null-island-artwork";
-import InlineLink from "@/app/components/shared/inline-link";
+import AccentLink from "@/app/components/shared/accent-link";
 import SplitSection from "@/app/components/shared/layout/split-section";
 import SectionMarker from "@/app/components/shared/section-marker";
 
@@ -20,9 +20,9 @@ export default function NotFound() {
           <div className="text-body flex flex-col gap-4 text-lg leading-8">
             <p>There's no page out here.</p>
 
-            <InlineLink href="/" className="w-fit">
+            <AccentLink href="/" className="w-fit">
               Head back home
-            </InlineLink>
+            </AccentLink>
           </div>
         </div>
       </div>
