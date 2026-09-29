@@ -3,7 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useLastPlayed } from "@/hooks/useLastPlayed";
-import { Music2 } from "lucide-react";
+import MusicNoteIcon from "@/app/components/icons/music-note-icon";
 import MusicWidgetLoadingSkeleton from "./music-widget-loading-skeleton";
 import MusicWidgetErrorState from "./music-widget-error-state";
 import PulseIndicator from "./pulse-indicator";
@@ -69,7 +69,7 @@ export default function MusicWidget() {
 
           {!artwork && (
             <div className="bg-artwork-placeholder/70 flex size-full items-center justify-center">
-              <Music2 className="text-primary/60 size-4" />
+              <MusicNoteIcon className="text-primary/60 size-5" />
             </div>
           )}
         </div>

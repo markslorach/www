@@ -1,4 +1,5 @@
-import { Headphones, HeartCrack } from "lucide-react";
+import BrokenHeartIcon from "@/app/components/icons/broken-heart-icon";
+import { Headphones } from "lucide-react";
 
 export default function MusicWidgetErrorState() {
   return (
@@ -14,7 +15,7 @@ export default function MusicWidgetErrorState() {
       </div>
       <div className="flex items-center gap-3">
         <div className="bg-artwork-placeholder/70 flex size-16 shrink-0 items-center justify-center rounded-sm shadow-xs">
-          <HeartCrack className="text-primary/60 size-5" />
+          <BrokenHeartIcon className="text-primary/60 size-5" />
         </div>
 
         <div className="flex min-w-0 flex-col gap-0.5">
