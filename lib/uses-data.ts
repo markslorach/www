@@ -98,7 +98,7 @@ export const usesSections: UsesSectionData[] = [
     icon: "server",
     items: [
       {
-        label: "UGREEN NASync DXP4800 Plus NAS",
+        label: "UGREEN NASync DXP4800 Plus",
         href: "https://ai-uk.ugreen.com/products/ugreen-nasync-dxp4800-plus-4-bay-nas",
         description:
           "My backup storage and local workhorse. I've lost track of how many Docker containers I have running on this thing. Incredible!",
