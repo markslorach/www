@@ -1,21 +1,27 @@
 "use client";
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useLastPlayed } from "@/hooks/useLastPlayed";
 import { Music2 } from "lucide-react";
-// import { Headphones } from "lucide-react";
 import MusicWidgetLoadingSkeleton from "./music-widget-loading-skeleton";
 import MusicWidgetErrorState from "./music-widget-error-state";
 import PulseIndicator from "./pulse-indicator";
 
 export default function MusicWidget() {
   const { data: lastPlayed, isLoading, error } = useLastPlayed();
+  const [failedArtwork, setFailedArtwork] = useState<string | null>(null);
 
   if (!lastPlayed && isLoading) return <MusicWidgetLoadingSkeleton />;
-
   if (!lastPlayed && error) return <MusicWidgetErrorState />;
-
   if (!lastPlayed) return null;
+
+  const artwork =
+    lastPlayed.artwork === failedArtwork ? null : lastPlayed.artwork;
+
+  const handleArtworkError = () => {
+    if (artwork) setFailedArtwork(artwork);
+  };
 
   return (
     <Link
@@ -23,18 +29,19 @@ export default function MusicWidget() {
       target="_blank"
       className="relative flex flex-col gap-3 overflow-clip rounded-sm border p-2 shadow-xs select-none"
     >
-      {lastPlayed.artwork && (
+      {artwork && (
         <Image
-          src={lastPlayed.artwork}
+          src={artwork}
           alt=""
           fill
           sizes="100%"
           draggable={false}
+          onError={handleArtworkError}
           className="absolute inset-0 -z-10 scale-150 object-cover opacity-15 blur-sm"
         />
       )}
 
-      {!lastPlayed.artwork && (
+      {!artwork && (
         <div className="from-primary/15 to-primary-muted/80 absolute inset-0 -z-10 bg-linear-to-br" />
       )}
 
@@ -43,24 +50,24 @@ export default function MusicWidget() {
           Last Played
         </h3>
 
-        {/* <Headphones className="text-primary/60 size-3.5" strokeWidth={2} /> */}
         <PulseIndicator />
       </div>
 
       <div className="flex items-center gap-3">
         <div className="relative size-16 shrink-0 overflow-hidden rounded-sm shadow-xs">
-          {lastPlayed.artwork && (
+          {artwork && (
             <Image
-              src={lastPlayed.artwork}
+              src={artwork}
               alt={`${lastPlayed.album} artwork`}
               fill
               sizes="64px"
               draggable={false}
+              onError={handleArtworkError}
               className="block scale-104 object-cover"
             />
           )}
 
-          {!lastPlayed.artwork && (
+          {!artwork && (
             <div className="bg-artwork-placeholder/70 flex size-full items-center justify-center">
               <Music2 className="text-primary/60 size-4" />
             </div>
