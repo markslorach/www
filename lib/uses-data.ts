@@ -89,7 +89,7 @@ export const usesSections: UsesSectionData[] = [
       {
         label: "Bear Notes",
         href: "https://bear.app/",
-        description: "My favourite Markdown notes app. Mac-only.",
+        description: "My favourite Markdown notes app.",
       },
     ],
   },
