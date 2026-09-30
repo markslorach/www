@@ -4,7 +4,6 @@ import { useScrollLock, useWindowSize } from "usehooks-ts";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-import MusicWidget from "../sidebar/last-played-widget/music-widget";
 import ThemeToggle from "./theme-toggle";
 
 const links = [
@@ -55,7 +54,7 @@ export default function MobileHeader() {
         </Link>
 
         <div className="flex items-center gap-4">
-          {!isOpen && <ThemeToggle />}
+          {/* {!isOpen && <ThemeToggle />} */}
 
           <button
             type="button"
@@ -104,7 +103,6 @@ function MobileMenu({ pathname }: { pathname: string }) {
           </Link>
         ))}
       </nav>
-      {/* <MusicWidget /> */}
     </div>
   );
 }
