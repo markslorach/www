@@ -36,7 +36,7 @@ export default function ProjectSection({ limit }: ProjectSectionProps) {
             href="https://github.com/markslorach"
             target="_blank"
             rel="noreferrer"
-            className="text-primary group inline-flex items-center gap-1.25 font-mono text-[11px] leading-3 font-normal tracking-[0.12em] uppercase focus-visible:outline-2 focus-visible:outline-offset-4"
+            className="text-primary group inline-flex items-center gap-1.25 font-mono text-[11px] leading-3 font-medium tracking-[0.08em] uppercase focus-visible:outline-2 focus-visible:outline-offset-4"
           >
             More projects on GitHub
             <ArrowUpRightIcon className="size-2.5 transition-transform duration-200 group-hover:translate-x-0.5" />

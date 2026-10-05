@@ -46,7 +46,7 @@ export default function ProjectCard({
           <div className="flex h-6 w-26 shrink-0 items-center justify-end md:h-7">
             <span
               className={cn({
-                "text-primary flex w-fit items-center gap-1 font-mono text-[10px] leading-2.75 font-medium tracking-[0.08em] uppercase md:gap-1.25 md:leading-3 md:tracking-widest": true,
+                "text-primary flex w-fit items-center gap-1 font-mono text-[11px] leading-3 font-medium tracking-[0.08em] uppercase md:gap-1.25": true,
                 "bg-primary-muted rounded-xs px-2 py-1.5": isCaseStudy,
               })}
             >
@@ -61,7 +61,7 @@ export default function ProjectCard({
             {project.description}
           </p>
 
-          <span className="text-muted-foreground mt-2.5 block font-mono text-[10px] leading-3.5 tracking-[0.06em] md:mt-3 md:text-[11px] md:tracking-[0.08em]">
+          <span className="text-muted-foreground mt-2.5 block font-mono text-[11px] leading-3.5 tracking-[0.02em] md:mt-3">
             {project.tags.join(" · ")}
           </span>
         </div>
