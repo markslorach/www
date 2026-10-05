@@ -11,8 +11,20 @@ export default function ProjectCard({
   index: number;
 }) {
   const isCaseStudy = project.caseStudy;
-  const href = isCaseStudy ? `/projects/${project._meta.path}` : project.github;
+
+  const href = isCaseStudy
+    ? `/projects/${project._meta.path}`
+    : project.liveUrl || project.github;
+
+  const actionLabel = isCaseStudy
+    ? "Case study"
+    : project.liveUrl
+      ? "Visit site"
+      : "GitHub";
+
   const ProjectArrow = isCaseStudy ? ArrowRightIcon : ArrowUpRightIcon;
+
+  if (!href) return null;
 
   return (
     <Link
@@ -38,7 +50,7 @@ export default function ProjectCard({
                 "bg-primary-muted rounded-xs px-2 py-1.5": isCaseStudy,
               })}
             >
-              {isCaseStudy ? "Case study" : "GitHub"}
+              {actionLabel}
               <ProjectArrow className="size-2 transition-transform duration-200 group-hover:translate-x-0.5 md:size-2.5" />
             </span>
           </div>

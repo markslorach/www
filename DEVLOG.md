@@ -57,3 +57,9 @@ Added a live homepage snapshot with current Now copy, Glasgow time and weather a
 ### Added the Uses page
 
 Added a standalone selection of the hardware, software and self-hosted tools I use, with custom category icons and a closer look at my desk setup. Moved the page away from MDX and updated the shared image lightbox and link styling to support it.
+
+## 5 October 2026
+
+### Focused the homepage on client work
+
+Changed the homepage projects section to Work, featuring Boskalis Equipment Maintenance and Family Mediation Highland with a link to more projects on GitHub. Added support for linking projects directly to live websites without requiring a public repository.

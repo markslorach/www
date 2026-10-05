@@ -7,17 +7,27 @@ const projects = defineCollection({
   name: "projects",
   directory: "content/projects",
   include: "*.mdx",
-  schema: z.object({
-    title: z.string(),
-    description: z.string(),
-    heroImage: z.string().optional(),
-    github: z.string(),
-    projectType: z.string().optional(),
-    caseStudy: z.boolean().default(false),
-    order: z.number(),
-    tags: z.string().array(),
-    content: z.string(),
-  }),
+  schema: z
+    .object({
+      title: z.string(),
+      description: z.string(),
+      heroImage: z.string().optional(),
+      github: z.string().optional(),
+      liveUrl: z.string().optional(),
+      projectType: z.string().optional(),
+      caseStudy: z.boolean().default(false),
+      order: z.number(),
+      tags: z.string().array(),
+      content: z.string(),
+    })
+    .refine(
+      (project) =>
+        project.caseStudy || Boolean(project.liveUrl || project.github),
+      {
+        message:
+          "Projects without a case study must provide liveUrl or github.",
+      },
+    ),
   transform: async (document, context) => {
     const mdx = await compileMDX(context, document);
     return {

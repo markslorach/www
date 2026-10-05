@@ -9,7 +9,7 @@ export default function Footer() {
       <Link
         href="https://github.com/markslorach/www.git"
         target="blank"
-        className="inline-flex items-center gap-1 border-b border-dotted border-current pb-0.5"
+        className="inline-flex items-center gap-1"
       >
         <span>Source</span>
         <ArrowUpRightIcon className="size-2.5" aria-hidden="true" />

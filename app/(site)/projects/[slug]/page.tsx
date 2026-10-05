@@ -73,14 +73,16 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           </div>
 
           <div className="flex flex-wrap items-center gap-3">
-            <Link
-              href={project.github}
-              target="_blank"
-              className="text-muted-foreground hover:text-foreground group inline-flex items-center text-sm transition-colors duration-200 ease-in-out"
-            >
-              View repository
-              <ArrowUpRight className="ml-1 size-4 text-[#0892d0] transition-transform duration-200 ease-in-out group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-            </Link>
+            {project.github && (
+              <Link
+                href={project.github}
+                target="_blank"
+                className="text-muted-foreground hover:text-foreground group inline-flex items-center text-sm transition-colors duration-200 ease-in-out"
+              >
+                View repository
+                <ArrowUpRight className="ml-1 size-4 text-[#0892d0] transition-transform duration-200 ease-in-out group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              </Link>
+            )}
 
             {project.tags.length > 0 && (
               <ul className="flex flex-wrap gap-2">

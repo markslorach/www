@@ -16,7 +16,7 @@ export default function Home() {
         <SproutSVG />
       </div>
 
-      <ProjectSection limit={3} />
+      <ProjectSection limit={2} />
 
       <div className="pt-26">
         <NowSection />
