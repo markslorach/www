@@ -18,7 +18,7 @@ export default function Home() {
 
       <ProjectSection limit={2} />
 
-      <div className="pt-26">
+      <div className="pt-22 md:pt-26">
         <NowSection />
       </div>
 
@@ -27,7 +27,7 @@ export default function Home() {
         <ArticleList limit={5} />
       </Stack> */}
 
-      <div className="pt-26">
+      <div className="pt-22 md:pt-26">
         <ContactSection />
       </div>
     </div>
