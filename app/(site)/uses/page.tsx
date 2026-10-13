@@ -17,7 +17,7 @@ export default function UsesPage() {
 
         <div className="w-full flex-1">
           <header className="flex flex-col gap-5.5">
-            <h1 className="font-heading text-foreground text-[26px] leading-10 font-medium tracking-[-0.02em]">
+            <h1 className="font-heading text-foreground text-[26px] leading-10 font-medium tracking-[-0.02em] md:text-[30px]">
               What I use.
             </h1>
 

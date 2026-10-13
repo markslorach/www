@@ -24,7 +24,7 @@ export default function UsesSections() {
         key={section.label}
         className="items-start gap-8 pt-16 md:gap-10 md:pt-20"
       >
-        <div className="flex shrink-0 flex-col-reverse gap-2.5 md:w-50 md:flex-col">
+        <div className="flex shrink-0 flex-row-reverse items-center gap-2 md:w-50 md:flex-col md:items-stretch md:gap-2.5">
           <h2 className="text-foreground font-mono text-[11px] font-medium tracking-[0.16em] uppercase">
             {section.label}
           </h2>
@@ -33,12 +33,9 @@ export default function UsesSections() {
         </div>
 
         <div className="border-border w-full border-t pt-6 md:pt-8">
-          <ul className="flex max-w-140 flex-col gap-4.5">
+          <ul className="flex max-w-140 flex-col gap-6">
             {section.items.map((item) => (
-              <li
-                key={item.label}
-                className="text-muted-foreground text-base leading-6.5"
-              >
+              <li key={item.label} className="text-body text-base leading-6.5">
                 <h3 className="text-foreground mb-0.75 text-[17px] leading-6.25 font-semibold">
                   {item.href ? (
                     <Link
