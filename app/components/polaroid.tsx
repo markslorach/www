@@ -41,7 +41,7 @@ export default function Polaroid() {
         </div>
       </div>
 
-      <figcaption className="text-polaroid-foreground flex flex-col gap-0.5 pt-2.25 pb-2.75 font-mono text-[9px] leading-3 tracking-widest">
+      <figcaption className="text-polaroid-foreground flex flex-col gap-0.5 pt-2.25 pb-2.75 font-mono text-[10px] leading-3.5 tracking-[0.9px]">
         <Link
           href="https://www.google.com/maps/search/?api=1&query=56.258667%2C-4.322389"
           target="_blank"

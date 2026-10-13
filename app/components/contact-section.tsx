@@ -59,10 +59,12 @@ export default function ContactSection() {
               type="button"
               onClick={() => handleCopy(EMAIL)}
               aria-label="Copy email address"
-              className="border-primary-border text-primary hover:bg-primary-muted focus-visible:outline-primary flex items-center gap-1.5 rounded-sm border px-2 py-1.5 font-mono text-[10px] font-medium tracking-[0.12em] uppercase transition-colors duration-200 ease-in-out focus-visible:outline-2 focus-visible:outline-offset-2"
+              className="text-primary focus-visible:outline-primary group flex h-11 items-center rounded-[3px] font-mono text-[11px] leading-4 font-medium tracking-[0.1em] uppercase focus-visible:outline-2 focus-visible:outline-offset-2"
             >
-              <Copy aria-hidden="true" className="size-3" />
-              Copy
+              <span className="border-primary-border group-hover:bg-primary-muted flex h-7 min-w-18 items-center justify-center gap-1.5 rounded-[3px] border px-2 transition-colors duration-200 ease-in-out">
+                <Copy aria-hidden="true" className="size-3" />
+                Copy
+              </span>
             </button>
           </div>
         </div>

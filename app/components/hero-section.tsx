@@ -13,7 +13,7 @@ export default function HeroSection() {
       </div>
 
       <div className="flex w-full flex-1 flex-col gap-5.5">
-        <h1 className="font-heading text-foreground text-[26px] leading-10 font-medium tracking-[-0.02em]">
+        <h1 className="font-heading text-foreground text-[26px] leading-10 font-medium tracking-[-0.02em] md:text-[30px]">
           Hey, I'm Mark.
         </h1>
 

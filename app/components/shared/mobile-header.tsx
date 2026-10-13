@@ -61,7 +61,7 @@ export default function MobileHeader() {
             aria-expanded={isOpen}
             aria-controls="mobile-menu"
             onClick={() => setIsOpen((open) => !open)}
-            className="text-foreground font-mono text-[11px] font-medium tracking-[0.16em] uppercase"
+            className="text-foreground flex h-11 min-w-11 items-center justify-end font-mono text-[11px] font-medium tracking-[0.16em] uppercase"
           >
             {isOpen ? "Close" : "Menu"}
           </button>
