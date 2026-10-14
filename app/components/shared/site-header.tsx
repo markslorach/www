@@ -16,13 +16,16 @@ export default function SiteHeader() {
   const pathname = usePathname();
 
   return (
-    <header className="border-b-border hidden items-center justify-between border-b pb-6 font-mono text-[11px] leading-none uppercase md:flex">
-      <Link href="/" className="text-foreground font-medium tracking-[0.16em]">
+    <header className="border-b-border hidden items-center justify-between border-b pb-6 md:flex">
+      <Link
+        href="/"
+        className="text-foreground font-mono text-[11px] leading-none font-medium tracking-[0.16em] uppercase"
+      >
         Mark Slorach
       </Link>
 
       <div className="flex items-center gap-7">
-        <nav className="text-muted-foreground flex gap-7 tracking-[0.14em]">
+        <nav className="text-muted-foreground flex gap-5 font-sans text-[15px] leading-none tracking-[-0.01em]">
           {links.map((link) => (
             <Link
               key={link.href}
@@ -34,7 +37,7 @@ export default function SiteHeader() {
             >
               <span
                 className={cn({
-                  "text-marker absolute right-full mr-1 text-xs font-bold opacity-0 transition-opacity group-hover:opacity-100": true,
+                  "text-marker absolute right-full mr-1 font-mono text-xs font-bold opacity-0 transition-opacity group-hover:opacity-100": true,
                   "opacity-100": pathname === link.href,
                 })}
                 aria-hidden="true"

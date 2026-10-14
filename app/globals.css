@@ -11,7 +11,8 @@
   --font-heading: var(--font-fraunces);
   --font-heading--font-variation-settings: "SOFT" 45, "WONK" 1;
   --font-sans: var(--font-source-serif);
-  --font-mono: var(--font-geist-mono);
+  --font-mono: var(--font-recursive-mono);
+  --font-mono--font-variation-settings: "MONO" 1, "CASL" 0.3;
 
   /* Paper colour reference */
   --color-background: var(--background);

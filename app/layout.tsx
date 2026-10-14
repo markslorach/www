@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Fraunces, Geist_Mono, Source_Serif_4 } from "next/font/google";
+import { Fraunces, Recursive, Source_Serif_4 } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
 
@@ -15,9 +15,10 @@ const sourceSerif = Source_Serif_4({
   style: ["normal", "italic"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const recursiveMono = Recursive({
+  variable: "--font-recursive-mono",
   subsets: ["latin"],
+  axes: ["MONO", "CASL"],
 });
 
 export const metadata: Metadata = {
@@ -35,7 +36,7 @@ export default function RootLayout({
       lang="en"
       suppressHydrationWarning
       data-scroll-behavior="smooth"
-      className={`${fraunces.variable} ${sourceSerif.variable} ${geistMono.variable} h-full antialiased md:scrollbar-gutter-stable`}
+      className={`${fraunces.variable} ${sourceSerif.variable} ${recursiveMono.variable} h-full antialiased md:scrollbar-gutter-stable`}
     >
       <body className="flex min-h-full flex-col">
         <ThemeProvider
