@@ -42,6 +42,9 @@ next-env.d.ts
 
 .content-collections
 .impeccable
+.codegraph
+
+DESIGN.md
 
 # local agent instructions
 /AGENTS.md

@@ -48,7 +48,7 @@ export default function ContactSection() {
                   animate={{ opacity: 1, y: 0, rotate: 4 }}
                   exit={{ opacity: 0, y: 4, rotate: 1 }}
                   transition={{ duration: 0.15, ease: "easeInOut" }}
-                  className="bg-primary-muted border-primary-border text-primary absolute -top-8 -right-5 z-10 rounded-sm border px-2 py-0.5 font-mono text-[10px] font-medium tracking-[0.08em] whitespace-nowrap uppercase shadow-xs"
+                  className="bg-primary-muted border-primary-border text-primary absolute -top-8 -right-5 z-10 rounded-[3px] border px-2 py-0.5 font-mono text-[10px] font-medium tracking-[0.08em] whitespace-nowrap uppercase shadow-xs"
                 >
                   Copied!
                 </motion.span>
@@ -59,7 +59,7 @@ export default function ContactSection() {
               type="button"
               onClick={() => handleCopy(EMAIL)}
               aria-label="Copy email address"
-              className="text-primary focus-visible:outline-primary group flex h-11 items-center rounded-[3px] font-mono text-[11px] leading-4 font-medium tracking-[0.1em] uppercase focus-visible:outline-2 focus-visible:outline-offset-2"
+              className="text-primary focus-visible:outline-primary group flex h-11 items-center rounded-[3px] font-mono text-[11px] leading-4 font-medium tracking-widest uppercase focus-visible:outline-2 focus-visible:outline-offset-2"
             >
               <span className="border-primary-border group-hover:bg-primary-muted flex h-7 min-w-18 items-center justify-center gap-1.5 rounded-[3px] border px-2 transition-colors duration-200 ease-in-out">
                 <Copy aria-hidden="true" className="size-3" />

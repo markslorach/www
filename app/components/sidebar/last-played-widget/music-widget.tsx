@@ -27,17 +27,19 @@ export default function MusicWidget() {
     <Link
       href={lastPlayed.url}
       target="_blank"
-      className="relative flex flex-col gap-3 overflow-clip rounded-sm border p-2 shadow-xs select-none"
+      rel="noopener noreferrer"
+      aria-label={`Last played: ${lastPlayed.title} by ${lastPlayed.artist}. Opens on Last.fm in a new tab.`}
+      className="focus-visible:outline-primary relative flex flex-col gap-3 overflow-clip rounded-sm border p-2 shadow-xs select-none focus-visible:outline-2 focus-visible:outline-offset-2"
     >
       {artwork && (
         <Image
           src={artwork}
           alt=""
           fill
-          sizes="100%"
+          sizes="(max-width: 768px) 100vw, 240px"
           draggable={false}
           onError={handleArtworkError}
-          className="absolute inset-0 -z-10 scale-150 object-cover opacity-15 blur-sm"
+          className="absolute inset-0 -z-10 scale-150 object-cover opacity-8 blur-sm"
         />
       )}
 
@@ -54,13 +56,13 @@ export default function MusicWidget() {
       </div>
 
       <div className="flex items-center gap-3">
-        <div className="relative size-16 shrink-0 overflow-hidden rounded-sm shadow-xs">
+        <div className="relative size-17.5 shrink-0 overflow-hidden rounded-sm shadow-xs">
           {artwork && (
             <Image
               src={artwork}
-              alt={`${lastPlayed.album} artwork`}
+              alt=""
               fill
-              sizes="64px"
+              sizes="70px"
               draggable={false}
               onError={handleArtworkError}
               className="block scale-104 object-cover"
@@ -74,8 +76,8 @@ export default function MusicWidget() {
           )}
         </div>
 
-        <div className="flex min-w-0 flex-col gap-0.5">
-          <p className="font-heading truncate text-[19px] leading-6 font-[450] tracking-[-0.01em]">
+        <div className="flex min-w-0 flex-1 flex-col gap-1">
+          <p className="font-heading line-clamp-2 text-[19px] leading-6 font-[450] tracking-[-0.01em] wrap-break-word">
             {lastPlayed.title}
           </p>
 

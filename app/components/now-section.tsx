@@ -46,7 +46,7 @@ export default function NowSection() {
           </AccentLink> */}
         </div>
 
-        <div className="w-full shrink-0 rotate-[0.5deg] md:w-60 md:pt-1">
+        <div className="w-full shrink-0 rotate-[0.5deg] md:w-64 md:pt-1">
           <MusicWidget />
         </div>
       </div>
