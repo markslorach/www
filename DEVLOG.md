@@ -63,3 +63,9 @@ Added a standalone selection of the hardware, software and self-hosted tools I u
 ### Focused the homepage on client work
 
 Changed the homepage projects section to Work, featuring Boskalis Equipment Maintenance and Family Mediation Highland with a link to more projects on GitHub. Added support for linking projects directly to live websites without requiring a public repository.
+
+## 16 October 2026
+
+### Added a Nord dark theme
+
+Developed a Nord dark theme in Paper and mapped it to the site's shared colour tokens, with a separate botanical colour for the sprout. Enabled desktop and mobile theme switching with custom sprout and snow-crystal icons and gave the music widget a themed surface beneath its blurred artwork.

@@ -4,8 +4,8 @@ import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
 // import { AnimatePresence, motion } from "motion/react";
-import MoonIcon from "../icons/moon-icon";
-import SunIcon from "../icons/sun-icon";
+import DarkThemeIcon from "../icons/dark-theme-icon";
+import LightThemeIcon from "../icons/light-theme-icon";
 
 export default function ThemeToggle() {
   const [mounted, setMounted] = useState(false);
@@ -16,15 +16,16 @@ export default function ThemeToggle() {
   }, []);
 
   const isDark = resolvedTheme === "dark";
+  const label = isDark ? "Switch to light theme" : "Switch to dark theme";
 
   return (
-    <div className="relative h-2.75 w-5">
+    <div className="size-11 shrink-0 md:-mr-3">
       {mounted && (
         <button
           type="button"
           onClick={() => setTheme(isDark ? "light" : "dark")}
-          className="text-muted-foreground hover:text-primary absolute top-1/2 left-0 size-5 -translate-y-1/2 transition-colors"
-          aria-label={isDark ? "Switch to light theme" : "Switch to dark theme"}
+          className="text-primary hover:text-foreground flex size-11 items-center justify-center rounded-sm transition-colors"
+          aria-label={label}
         >
           {/* <AnimatePresence mode="wait" initial={false}> */}
           {/*   <motion.span */}
@@ -35,10 +36,14 @@ export default function ThemeToggle() {
           {/*     transition={{ duration: 0.15, ease: "easeInOut" }} */}
           {/*     className="block" */}
           {/*   > */}
-          {/*     {isDark ? <SunIcon /> : <MoonIcon />} */}
+          {/*     {isDark ? <LightThemeIcon /> : <DarkThemeIcon />} */}
           {/*   </motion.span> */}
           {/* </AnimatePresence> */}
-          <span className="block">{isDark ? <SunIcon /> : <MoonIcon />}</span>
+          {isDark ? (
+            <LightThemeIcon className="h-6 w-5" />
+          ) : (
+            <DarkThemeIcon className="size-5" />
+          )}
         </button>
       )}
     </div>

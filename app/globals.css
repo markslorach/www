@@ -26,6 +26,7 @@
   --color-primary-muted: var(--primary-muted);
   --color-primary-border: var(--primary-border);
   --color-marker: var(--marker);
+  --color-botanical: var(--botanical);
   --color-polaroid: var(--polaroid);
   --color-polaroid-foreground: var(--polaroid-foreground);
   --color-artwork-placeholder: var(--artwork-placeholder);
@@ -80,6 +81,7 @@
   --primary-muted: #e4ebe4;
   --primary-border: #c3d2c6;
   --marker: #4f7361;
+  --botanical: #4f7361;
   --polaroid: #fcfbf8;
   --polaroid-foreground: #6e6a61;
   --artwork-placeholder: #c9d4c7;
@@ -115,22 +117,23 @@
 }
 
 .dark {
-  /* Paper colour reference — dark */
-  --background: #191919;
-  --card: #232323;
-  --border: #333333;
-  --border-subtle: #2b2b2b;
-  --foreground: #efefef;
-  --body: #c4c4c4;
-  --muted-foreground: #999999;
-  --primary: #a4c1b3;
-  --primary-muted: #232a26;
-  --primary-border: #3e4a43;
-  --marker: #a9474c;
-  --polaroid: #f5f5f2;
-  --polaroid-foreground: #62666e;
-  --artwork-placeholder: #3b4655;
-  --code-background: #141414;
+  /* Paper colour reference — Nord dark */
+  --background: #2e3440;
+  --card: #3b4252;
+  --border: #434c5e;
+  --border-subtle: #3b4252;
+  --foreground: #eceff4;
+  --body: #d8dee9;
+  --muted-foreground: #81a1c1;
+  --primary: #88c0d0;
+  --primary-muted: #3b4252;
+  --primary-border: #81a1c1;
+  --marker: #88c0d0;
+  --botanical: #8fbcbb;
+  --polaroid: #e5e9f0;
+  --polaroid-foreground: #434c5e;
+  --artwork-placeholder: #434c5e;
+  --code-background: #3b4252;
 
   /* shadcn compatibility */
   --card-foreground: oklch(0.985 0 0);

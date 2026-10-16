@@ -29,7 +29,7 @@ export default function MusicWidget() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label={`Last played: ${lastPlayed.title} by ${lastPlayed.artist}. Opens on Last.fm in a new tab.`}
-      className="focus-visible:outline-primary relative flex flex-col gap-3 overflow-clip rounded-sm border p-2 shadow-xs select-none focus-visible:outline-2 focus-visible:outline-offset-2"
+      className="bg-card focus-visible:outline-primary relative isolate flex flex-col gap-3 overflow-clip rounded-sm border p-2 shadow-xs select-none focus-visible:outline-2 focus-visible:outline-offset-2"
     >
       {artwork && (
         <Image
@@ -48,7 +48,7 @@ export default function MusicWidget() {
       )}
 
       <div className="flex items-center justify-between">
-        <h3 className="text-muted-foreground font-mono text-[11px] leading-3 font-medium tracking-[0.12em] uppercase">
+        <h3 className="text-muted-foreground dark:text-body font-mono text-[11px] leading-3 font-medium tracking-[0.12em] uppercase">
           Last Played
         </h3>
 

@@ -24,7 +24,7 @@ export default function SiteHeader() {
         Mark Slorach
       </Link>
 
-      <div className="flex items-center gap-7">
+      <div className="flex items-center gap-5">
         <nav className="text-muted-foreground flex gap-5 font-sans text-[15px] leading-none tracking-[-0.01em]">
           {links.map((link) => (
             <Link
@@ -48,7 +48,7 @@ export default function SiteHeader() {
             </Link>
           ))}
         </nav>
-        {/* <ThemeToggle /> */}
+        <ThemeToggle />
       </div>
     </header>
   );

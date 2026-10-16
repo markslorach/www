@@ -54,7 +54,7 @@ export default function MobileHeader() {
         </Link>
 
         <div className="flex items-center gap-4">
-          {/* {!isOpen && <ThemeToggle />} */}
+          {!isOpen && <ThemeToggle />}
 
           <button
             type="button"
