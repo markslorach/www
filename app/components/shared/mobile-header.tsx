@@ -53,7 +53,7 @@ export default function MobileHeader() {
           Mark Slorach
         </Link>
 
-        <div className="flex items-center gap-4">
+        <div className="flex items-center">
           {!isOpen && <ThemeToggle />}
 
           <button

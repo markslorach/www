@@ -11,7 +11,7 @@ export default function Polaroid() {
   const [isSnowing, setIsSnowing] = useState(false);
 
   return (
-    <figure className="bg-polaroid relative flex w-fit scale-105 rotate-[-2.5deg] flex-col rounded-xs px-2 pt-2 shadow-[0_1px_3px_rgb(28_27_24/7%)]">
+    <figure className="bg-polaroid relative flex w-fit scale-105 md:rotate-[-2.5deg] rotate-[-1.5deg] flex-col rounded-xs px-2 pt-2 shadow-[0_1px_3px_rgb(28_27_24/7%)]">
       <ThumbTack className="absolute top-1 right-1 z-10 size-3.5 drop-shadow-[0_2px_1.5px_rgb(28_27_24/30%)]" />
 
       <div
